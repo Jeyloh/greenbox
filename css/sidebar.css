@@ -1,0 +1,48 @@
+
+/* The sidebar is affected by jquery */
+#sidebar-wrapper {
+    z-index:1;
+    position:absolute;
+    width:0;
+    height:100%;
+    overflow-y: hidden;
+    background:#2C3E50;
+}
+/* This is where the main content is with a 8 and a 4 row */
+#page-content-wrapper {
+    width: 100%;
+    position: absolute;
+    padding: 15px;
+}
+
+/* Change width of sidebar to display it. menuDisplayed is used in the jquery */
+#wrapper.menuDisplayed #sidebar-wrapper{
+    width:250px;
+
+}/* Change the main content to start 250px from the left */
+#wrapper.menuDisplayed #page-content-wrapper{
+    padding-left:250px;
+}
+
+.sidebar-nav {
+    padding:0px;
+    list-style: none;
+}
+
+.sidebar-nav li {
+    /*text-indent:20px;*/
+    line-height: 60px;
+    text-align: center;
+    font-size:1.5em;
+}
+
+.sidebar-nav li a {
+    display: block;
+    text-decoration: none;
+    color: #ddd;
+
+}
+
+.sidebar-nav li a:hover {
+    background:#008800;
+}
