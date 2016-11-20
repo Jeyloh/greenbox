@@ -4,9 +4,35 @@ Wireframe Productview: https://wireframe.cc/Tfe9k0
 Wireframe Mobile: https://wireframe.cc/3ACC3T 
 
 
+## About
+The Greenbox is a student project created by me alone in my semester at WIT, Ireland. I'm
+creating this website as a part of my Web Applications course and Server Side Scripting course.
 
+For the front end, I'll be using Twitter Bootstrap, html, css, js and jquery. The back end
+is made up by PHP and MySQL. In the future, I'll be looking at Angular and Nodejs+express to 
+develop applications, but my courses requires these languages.
 
-## Actor features
+## What is Greenbox?
+Greenbox is an imaginary company from a business idea where customers receives packages of food to their
+house every week, including recipes and the exact amount of food required. The customer can chose between
+different packages containing different ingredients, different sizes, prices etc. The customer will also
+be able to subscribe for different amounts of time.
+
+## User Rules
+
+##### Not logged in
+There's a basic view of the page including the homepage, news about the company, contact page, faq page,
+login/register page and ofc the different food packages ... 
+
+##### Logged in as User
+The user will be taken to their homepage on login and gets extra menu buttons such as Homepage, Order ... 
+They are not able to see or modify the database.
+
+##### Logged in as Admin
+Admins have a form to add/remove items from the database, and also modify users. They also get some extra
+menu buttons on login. 
+
+##### More explanation
 WIthout logging in the user should be able to see the basic website including the different vegetable packages and be able to register.
 
 
@@ -20,41 +46,11 @@ The admin should be able to add records to the database, resulting in new produc
 
 When a user subscribes to a package the data should be stored in ‘subscription’ table
 
-
-## Design
-Add these features
-A nice page for the packages with an awesome design, maybe add in bootstrap?
-Set a fixed header and add useful menu tools there
-When the user scrolls down, add newsletter popup
-
-
-
-## The project proposal
-Briefly describe:
-the subject area of your project eg. E-commerce Shoe Store
-
-likely types of data to be stored - What tables, and fields?
-The types of users. e.g. Un-registered, registered, Admin
-The functions available to each type of user. e.g. Registered User: Search products by category/sub-category, Add to shopping Cart, check-out, modify personal data (Address/ phone/email)
-Subject area
-The Greenbox
-
-
-The webpage will be based on a business selling packages of Vegetarian food to be delivered to the door. There will be multiple menus and also focus on the front end part of things as it’s done in correlation with Web Applications course. Because of this it will also be made mobile friendly.
-
-
-Rules for users
-Below are the tables to be used. There will be a layout standard information layout for the page, with a requirement to sign up to actually order packages of vegetables home. As soon as you sign up with your user you will have access to a page that lets you choose different packages and subscribe to them to receive them monthly. This gives you a “Completed Order!” screen. You should be able to see and modify your remaining months, and userinfo on your userpage. 
-
-
-Admins are able to browse user's and remove components from the DB. 
-
-
 ## Data to store
 As of now I might go with a User *-1 Order 1-1 VegetablePackageID as you can only subscribe to one package at the same time. Then if the user wants to change the package, it can easily be updated in the DB. 
 
 
-Users  
+##### Users  
 * userID (Primary Key)
 * password 
 * userRole
@@ -68,13 +64,20 @@ Users
 * country 
 * Zip
 
-Order
-* orderID (Primary Key)
-* userID (Secondary Key)
-* vegetablePackageID (Secondary Key)
-* subscriptionPeriod
+##### Subscription
+* subscriptionId (Primary Key)
+* userId (Foreign Key from Users)
+* vegetablePackage (Foreign Key from VegetablePackages)
+* subscriptionInMonths
 
-VegetablePackages
-* vegetabePackageID (Primary Key)
+##### VegetablePackages
+* vegetablePackageId (Primary Key)
+* packageSalesName
+* description
+* imageLink
 * price
-* ingredientList
+* vegetable1
+* vegetable2
+* vegetable3
+* vegetable4
+* vegetable5
