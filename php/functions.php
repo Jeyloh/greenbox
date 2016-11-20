@@ -24,13 +24,26 @@ function encryptPassword($pwToEncrypt) {
 }
 
 function isAdmin() {
-	include('connect.php');
-	$_SESSION['user'] = "jorgenlybeck";
+    include('connect.php');
+    $con = new mysqli("localhost", "root", "usbw", "greenbox");
+
 	$username = $_SESSION['user'];
 	$adminStatus = $con->query("SELECT adminStatus FROM User WHERE userId = '$username'");
 	$result = mysqli_fetch_object($adminStatus);
 	// Ternary Logical if/else statement returning true 
-	return ($result->adminStatus == 1 ? true : false);
+	//return ($result->adminStatus == 1 ? true : false);
+    var_dump("<br>is the user logged in? " . $_SESSION['loggedin']);
+    var_dump("<br>Who is the user? " . $_SESSION['user']);
+    if($result->adminStatus == 1) {
+        return true;
+    } else {
+        return false;
+    }
+
+}
+
+function isLoggedIn() {
+
 }
 
 function getUserName() {
@@ -38,12 +51,14 @@ function getUserName() {
 }
 
 function checkUserLogin($myusername, $mypassword) {
-	"SELECT * FROM User WHERE userId='$myusername' AND password='$mypassword'";
+	$query = "SELECT * FROM User WHERE userId='$myusername' AND password='$mypassword'";
 }
 
 function insertIntoUser($username, $encryptedPassword, $isAdmin, $fname, $lname, $phone, $mail, $address, $country, $zip){
-	$query = "INSERT INTO User(userId, password, adminStatus, firstName, lastName, phone, email, address, country, zip) VALUES('$username', '$encryptedPassword', '$isAdmin', '$fname', '$lname','$phone', '$mail', '$address', '$country', '$zip')";
+	$query = "INSERT INTO User(userId, password, adminStatus, firstName, lastName, phone, email, address, country, zip) 
+VALUES('$username', '$encryptedPassword', '$isAdmin', '$fname', '$lname','$phone', '$mail', '$address', '$country', '$zip')";
 	return $query;
 }
+
 
 ?>

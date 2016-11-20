@@ -4,7 +4,7 @@
 <body>
 
 <?php
-require("connect.php");
+include_once("connect.php");
 
 // Create database
 $deleteDB = "DROP DATABASE $db";
@@ -21,7 +21,6 @@ if ($con->query($createDB) === TRUE) {
 } else {
     echo "<br>Error creating database: " . $con->error;
 }
-
 $con = new mysqli($servername, $username, $password, $db);
 
 // Invoked for every table
@@ -98,7 +97,8 @@ PRIMARY KEY (vegetablePackageId))";
 //FOREIGN KEY (vegList) REFERENCES VegetablePackage(vegListId),
 //FOREIGN KEY (subscriptionId) REFERENCES mysubscription(subscriptionId)
 
-$vegetablePackage_records = "INSERT INTO VegetablePackage ('packageSalesName', 'price', 'vegetable1', 'vegetable2', 'vegetable3', 'vegetable4', 'vegetable5') VALUES('Back to the Roots', 29, 'Potato', 'Sweetpotato', 'Carrot', 'Pear', 'Lemon')";
+$vegetablePackage_records = "INSERT INTO VegetablePackage ('packageSalesName', 'price', 'vegetable1', 'vegetable2', 
+'vegetable3', 'vegetable4', 'vegetable5') VALUES('Back to the Roots', 29, 'Potato', 'Sweetpotato', 'Carrot', 'Pear', 'Lemon')";
 
 
 // Run functions to create all these.

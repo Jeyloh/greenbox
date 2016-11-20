@@ -27,7 +27,7 @@
             <!-- Left Hand Side -->
             <ul class="nav navbar-nav">
                 <li><a href="index.html">Home</a></li>
-                <li class="active"><a href="newbostonTutorial.html">TNB Tutorial</a></li>
+                <li class="active"><a href="newbostonTutorial.php">TNB Tutorial</a></li>
                 <li><a href="news.html">News</a></li>
                 <li><a href="reviews.html">Reviews</a></li>
                 <li><a href="faq.html">FAQ</a></li>
@@ -39,10 +39,30 @@
                     </ul>
                 </li>
             </ul>
-            <!-- Right Hand Side -->
-            <ul class="nav navbar-nav navbar-right">
-                <li><a href="login.php">Login</a></li>
-                <li><a href="register.php">Register</a></li>
+            <!-- NavBar PHP code to check if user is admin and add appropriate menu items,
+            then add either login/register or logout if the user is logged in or not -->
+            <?php
+                session_start();
+                include('php/connect.php');
+                include('php/functions.php');
+                if(isAdmin()) {
+                    echo('<li><a href="php/adminpage.php">Admin HUB</a></li>');
+                    echo('<li><a href="#">Add Box</a></li>');
+                } else {
+                    echo('<li><a href="php/userpage.php">User Home</a></li>');
+                    echo('<li><a href="#">Subscribe</a></li>');
+                }
+                // Add a navbar to the right side
+                echo('<ul class="nav navbar-nav navbar-right">');
+                // Check if the user is logged in and set logout or login as appropriate
+                if(isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
+                    echo('<li><a href="logout.php">Log Out</a></li>');
+                } else {
+                    echo('<li><a href="login.php">Login</a></li>');
+                    echo('<li><a href="register.php">Register</a></li>');
+                }
+            ?>
+
             </ul>
         </div>
     </div>

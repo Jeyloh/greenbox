@@ -1,69 +1,84 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-	<title>Admin Page</title>
+	<title>Greenbox</title>
 	<meta charset="utf-8">
-	<link rel="stylesheet" href="css/slideshow.css">
-	<link rel="stylesheet" href="css/greenhouse.css">
-	<link rel="stylesheet" href="css/responsive.css">
-	<link rel="stylesheet" href="css/mobile-menu.css">
-	<script src="js/mobile-menubutton.js"></script>
-	<script src="js/slideshow.js"></script>
-	
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 </head>
-<body onload="showSlides()">
-	<div id="wrapper">
-		<header>
-            <img src="images/greenhouse-logo.png" id="greenhouse-logo">
-            <!-- Use any element to open the sidenav -->
-			<span style="font-size:30px;cursor:pointer;">
-				<img src="images/mobile-menu-2.png" id="mobile-logo" visibility="hidden" onclick="openNav()">
-			</span>
-			<h1>The Greenhouse</h1>
-			<nav>
-				<a href="index.html" class="navbtn">Home</a>
-				<a href="gallery.html" class="navbtn">Gallery</a> 
-				<a href="news.html" class="navbtn">News</a>
-				<a href="reviews.html" class="navbtn">Reviews</a>
-				<a href="faq.html" class="navbtn">FAQ</a>
-				<?php
-					include('connect.php');
-					include('functions.php');
-					if (isAdmin()) {
-						echo '<a href="adminAddProducts.php" id="orderbtn">Add Greenbox</a>';
-						echo '<a href="adminManageUsers.php" id="orderbtn">Change Users</a>';
-					} else {
-						echo '<a href="userOrderBox.php" class="navbtn">Order</a>';
-						echo '<a href="userPage.php" class="navbtn">Your Homepage</a>';
-					}
-				?>
-			</nav>
+<body>
+<!-- Fixed Navigation Bar  -->
+<nav class="navbar navbar-default navbar-fixed-top">
+	<div class="container-fluid">
 
-			<a href="login.php" class="loginbtn">Log in</a> <!-- Change to javascript popup with a darker main page for loging in -->
-			<a href="register.php" class="loginbtn">Register</a>
+		<!-- Logo -->
+		<div class="navbar-header">
+			<!-- Collapse mainNavBar button -->
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mainNavBar">
+				<span class="glyphicon glyphicon-th"></span>
+			</button>
+			<a href="#" class="navbar-brand"><kbd>GREENBOX</kbd></a>
+		</div>
 
-			<div id="mySidenav" class="sidenav">
-				<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-				<a href="index.html">Home</a>
-				<a href="gallery.html">Gallery</a>
-				<a href="news.html">News</a>
-				<a href="reviews.html">Reviews</a>
-				<a href="faq.html">FAQ</a>
-				<a href="order.html" id="mobile-order-btn">Order</a>
-				<a href="login.php" id="mobile-login-btn">Log in</a>
-				<a href="register.php" id="mobile-login-btn">Register</a>
-			</div>
-		</header>
-		
-		<main>
-			<h1>Welcome to the Admin page <?php $_SESSION['user'];?></h1>
-			<p>The Admin should be able to add products (with img) into the procuctview page</p>
-		</main>
-		
-		<footer>
-			Copyright &copy; 2016 The Greenhouse<br>
-			<a href="mailto:jorgenlybeck94@gmail.com" id="footermail">-Send the designer a mail-</a>
-		</footer>
+		<!-- Collapsable Menu Items -->
+		<div class="collapse navbar-collapse" id="mainNavBar">
+			<!-- Left Hand Side -->
+			<ul class="nav navbar-nav">
+				<li><a href="index.html">Home</a></li>
+				<li class="active"><a href="newbostonTutorial.php">TNB Tutorial</a></li>
+				<li><a href="Greenboxes">News</a></li>
+				<li><a href="reviews.html">Reviews</a></li>
+				<li><a href="faq.html">FAQ</a></li>
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown">My Profile<span class="caret"></span></a>
+					<ul class="dropdown-menu">
+						<li><a href="#">Order Box</a></li>
+						<li><a href="#">Settings</a></li>
+					</ul>
+				</li>
+
+			<!-- NavBar PHP code to check if user is admin and add appropriate menu items,
+            then add either login/register or logout if the user is logged in or not -->
+			<?php
+			session_start();
+			include('connect.php');
+			include('functions.php');
+			if(isAdmin()) {
+				echo('<li><a href="php/adminpage.php">Admin HUB</a></li>');
+				echo('<li><a href="#">Add Box</a></li>');
+			} else {
+				echo('<li><a href="php/userpage.php">User Home</a></li>');
+				echo('<li><a href="#">Subscribe</a></li>');
+			}
+			// Add a navbar to the right side
+			echo('<ul class="nav navbar-nav navbar-right">');
+			// Check if the user is logged in and set logout or login as appropriate
+			if(isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
+				echo('<li><a href="logout.php">Log Out</a></li>');
+			} else {
+				echo('<li><a href="login.php">Login</a></li>');
+				echo('<li><a href="register.php">Register</a></li>');
+			}
+			echo('</ul>');
+			?>
+			</ul>
+		</div>
 	</div>
+</nav>
+<div class="container">
+	<div class="row">
+		<div class="col-md-8">
+			<h3>col-md-6</h3>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+			<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+		</div>
+		<div class="col-md-4">
+			<img src="../resources/art.jpg" class="img-responsive img-rounded">
+
+		</div>
+	</div>
+</div>
 </body>
 </html>
