@@ -9,6 +9,7 @@
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 
     <link rel="stylesheet" href="css/sidebar.css">
+    <link rel="stylesheet" href="css/greenbox.css">
 </head>
 <body>
 <!-- Fixed Navigation Bar  -->
@@ -42,34 +43,88 @@
                 </li>
             </ul>
             <!-- Right Hand Side -->
-            <ul class="nav navbar-nav navbar-right">
-                <li><a href="login.php">Login</a></li>
-                <li><a href="register.php">Register</a></li>
-                <li><a href="#" class="btn btn-success" id="menu-toggle">Toggle Menu</a></li>
+            <ul class="nav navbar-nav navbar-right" id="right-nav">
+                <!-- A modal link to open the login-modal -->
+                <li><a href="#" class="btn btn-success" id="login-modal-trigger" data-target="#login-modal" data-toggle="modal">Login/Register</a></li>
+                <li><a href="#" class="btn btn-info" id="menu-toggle">Toggle Menu</a></li>
+
             </ul>
         </div>
     </div>
 </nav>
 
+
+<!-- Create a Modal for logging in or registering. Includes 2 tabs with different php calls -->
+<div id="login-modal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <!-- Modal Header containing the tabs -->
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <!-- Tabs for displaying either Login or Register data -->
+                <ul class="nav nav-tabs nav-justified">
+                    <li class="active"><a href="#">Login</a></li>
+                    <li><a href="#">Register</a></li>
+                </ul>
+            </div>
+            <!-- The displayed login/registered data -->
+            <div class="modal-body">
+                    <!-- Login form, HIDE/DISPLAY on tabs toggle -->
+                <div class="row">
+                    <div class="col-lg-8 col-centered" >
+                        <form class="form-signin" action="php/processLogin.php.php">
+                            <h2 class="form-signin-heading">Please sign in</h2>
+                            <label for="inputEmail" class="sr-only">Email address</label>
+                            <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+                            <label for="inputPassword" class="sr-only">Password</label>
+                            <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" value="remember-me"> Remember me
+                                </label>
+                            </div>
+                            <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+            <!-- Modal footer -->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+
 <!-- The Main Container set to fluid to fill out the whole page
 Also a wrapper containing sidebar-wrapper and page-content-wrapper -->
 <div class="container-fluid" id="wrapper" style="margin-top:50px">
 
-
-    <div >
-
-
-        <!-- Responsive Sidebar -->
-        <div id="sidebar-wrapper">
-            <ul class="sidebar-nav">
-                <li><a href="#">Settings</a></li>
-                <li><a href="#">Login</a></li>
-                <li><a href="#">Register</a></li>
-            </ul>
+    <div id="banner">
+        <div class="container-fluid">
+            <div class="row">
+                <!-- Main Content Column -->
+                <div class="col-lg-12">
+                    <img src="resources/images/front-page-4.jpg" width="100%">
+                </div>
+            </div>
         </div>
+    </div>
 
-        <!-- Page Content -->
-        <div id="page-content-wrapper">
+    <!-- Responsive Sidebar -->
+    <div id="sidebar-wrapper">
+        <ul class="sidebar-nav">
+            <li><a href="#">Settings</a></li>
+            <li><a href="#">Login</a></li>
+            <li><a href="#">Register</a></li>
+        </ul>
+    </div>
+
+    <!-- Page Content -->
+    <div id="page-content-wrapper">
             <div class="container-fluid">
                 <div class="row">
                     <!-- Main Content Column -->
@@ -142,8 +197,6 @@ Also a wrapper containing sidebar-wrapper and page-content-wrapper -->
                 </div>
             </div>
         </div>
-    </div>
-
 </div>
 
 <!-- Bootstrap core JavaScript
@@ -165,7 +218,14 @@ Also a wrapper containing sidebar-wrapper and page-content-wrapper -->
         $("#wrapper").toggleClass("menuDisplayed");
 
     });
-</script>
 
+    // On clicking #menu-toggle
+    $("#login-modal-trigger").click( function (e) {
+        // Prevent the link to go to the URL
+        e.preventDefault();
+
+
+    });
+</script>
 </body>
 </html>

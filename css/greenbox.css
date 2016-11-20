@@ -1,0 +1,9 @@
+.col-centered{
+    float: none;
+    margin: 0 auto;
+}
+
+#right-nav li a {
+    color:white;
+    font-weight: bold;
+}
