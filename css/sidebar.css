@@ -16,11 +16,11 @@
 }
 
 /* Change width of sidebar to display it. menuDisplayed is used in the jquery */
-#wrapper.menuDisplayed #sidebar-wrapper{
+#main-content-wrapper.menuDisplayed #sidebar-wrapper{
     width:250px;
 
 }/* Change the main content to start 250px from the left */
-#wrapper.menuDisplayed #page-content-wrapper{
+#main-content-wrapper.menuDisplayed #page-content-wrapper{
     padding-left:250px;
 }
 

@@ -1,0 +1,44 @@
+.nav.navbar-nav li a , .dropdown-menu{
+    color: white;
+}
+.nav.navbar-nav li a:hover {
+    background-color:forestgreen;
+    color:white;
+    transition: all .8s ease-out;
+}
+#login-modal-trigger {
+    background-color:lightgreen;
+}#login-modal-trigger:hover{background-color:darkgray;}
+#logout-btn {
+    background-color:darkorange;
+} #logout-btn:hover{background-color:darkgray;}
+.active a{
+    text-decoration: underline;
+    background-color: transparent;
+}
+.nav>li>a:hover, .nav>li>a:focus, .nav>li>a:active  {
+    background-color: transparent;
+}
+
+.navbar {
+    height:80px;
+    -webkit-transition: all .8s ease-out;
+    -moz-transition: all .8s ease-out;
+    -o-transition: all .8s ease-out;
+    -ms-transition: all .8s ease-out;
+    transition: all .8s ease-out;
+    background: rgba(0, 0, 0, 0);
+
+}
+
+.navbar.scrolled, #banner.scrolled {
+    background: rgba(0, 0, 0, .9); //NON-IE
+    background-color:gray;
+    height:50px;
+}
+
+#fixed-navbar
+{
+    border:none;
+    box-shadow:none;
+}

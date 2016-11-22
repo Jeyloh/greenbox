@@ -1,9 +1,63 @@
+@font-face {
+    font-family:"Font Awesome";
+    src: url("../fonts/FontAwesome.otf");
+    src: url("../fonts/fontawesome-webfont.ttf");
+}
+body {
+    font-family: "Font Awesome", Verdana, Tahoma;
+}
+
+/* Colors things white */
+.white {
+    color:white;
+}
+
+/* Self made to center col classes */
 .col-centered{
     float: none;
     margin: 0 auto;
 }
 
-#right-nav li a {
+/* TODO: Make the banner stretch over whole width */
+#banner{
+    background-image:url("../resources/vine-blur.jpg");
+    background-size: cover;
     color:white;
-    font-weight: bold<;
+    left:0px;
+    right:0px;
+    height:400px;
+    padding:0px;
+
+}
+
+/* TODO: Add better logo */
+.navbar-brand img {
+    width:80px;
+    height: 80px;
+    top:0px;
+    margin-left:15px;
+
+}
+
+#header-text {
+    position: absolute;
+    margin: 100px auto 0 auto;
+    left:50%;
+    right:50%;
+}
+
+#right-nav{
+    padding-right:30px;
+    z-index:5;
+}
+
+/* TODO Change behavious of collapse bar */
+@media (max-width: 768px) {
+
+    .navbar-default .navbar-collapse {
+        border-color: transparent; /* Removes border color */
+        float: left; /* Move navbar toggle to left */
+        width:250px;
+
+    }
 }

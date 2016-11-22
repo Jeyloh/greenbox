@@ -3,6 +3,8 @@ Wireframe Productview: https://wireframe.cc/Tfe9k0
 
 Wireframe Mobile: https://wireframe.cc/3ACC3T 
 
+Creately Navigation View: https://creately.com/diagram/ivsgt5ny1/68eGD3FxRODQDnmq5dYJ4K8gls%3D
+
 
 ## About
 The Greenbox is a student project created by me alone in my semester at WIT, Ireland. I'm
