@@ -16,7 +16,6 @@
           crossorigin="anonymous">
 
 
-
     <!-- Personal css files -->
     <link rel="stylesheet" href="css/sidebar.css">
     <link rel="stylesheet" href="css/greenbox.css">
@@ -58,29 +57,27 @@
                 <!-- A modal link to open the login-modal -->
 
 
-            <?php
+                <?php
                 session_start();
                 include('connect.php');
                 include('functions.php');
-                if(isLoggedIn()) {
+                if (isLoggedIn()) {
                     // TODO: Add these items to the navbar on the right side!
-                    if($_SESSION['admin'] == true) {
+                    if ($_SESSION['admin'] == true) {
                         echo('<li><a href="adminpage.php">Admin HUB</a></li>');
                         echo('<li><a href="#">Add Box</a></li>');
-                    }
-                    else {
+                    } else {
                         echo('<li><a href="userpage.php">User Home</a></li>');
                         echo('<li><a href="#">Subscribe</a></li>');
                     }
                 }
                 // Check if the user is logged in and set logout or login as appropriate
-                if(isLoggedIn()) {
+                if (isLoggedIn()) {
                     echo('<li><a href="logout.php" id="logout-btn">Log Out</a></li>');
-                }
-                else {
+                } else {
                     echo('<li><a href="#" id="login-modal-trigger" data-target="#login-modal" data-toggle="modal">Login/Register</a></li>');
                 }
-            ?>
+                ?>
             </ul>
         </div>
         <h1 class="white" id="header-text"><!-- Add Header here instead?--></h1>
@@ -107,9 +104,11 @@
                         <form class="form-signin" method="POST" action="processLogin.php">
                             <h2 class="form-signin-heading">Please sign in</h2>
                             <label for="inputEmail" class="sr-only">Email/Username</label>
-                            <input type="text" id="inputEmail" name="loginusername" class="form-control" placeholder="Email address" required autofocus>
+                            <input type="text" id="inputEmail" name="loginusername" class="form-control"
+                                   placeholder="Email address" required autofocus>
                             <label for="inputPassword" class="sr-only">Password</label>
-                            <input type="password" id="inputPassword" name="loginpassword" class="form-control" placeholder="Password" required>
+                            <input type="password" id="inputPassword" name="loginpassword" class="form-control"
+                                   placeholder="Password" required>
                             <div class="checkbox">
                                 <label>
                                     <input type="checkbox" value="remember-me"> Remember me
@@ -124,9 +123,12 @@
                             <h2 class="form-signin-heading">Register here</h2>
                             <br><br>
                             <label>User Information</label>
-                            <input type="text" name=registerusername class="form-control" placeholder="Username" required autofocus>
-                            <input type="password" name=registerpassword class="form-control" placeholder="Password" required>
-                            <input type="password" name=confirmpassword class="form-control" placeholder="Confirm Password" required>
+                            <input type="text" name=registerusername class="form-control" placeholder="Username"
+                                   required autofocus>
+                            <input type="password" name=registerpassword class="form-control" placeholder="Password"
+                                   required>
+                            <input type="password" name=confirmpassword class="form-control"
+                                   placeholder="Confirm Password" required>
                             <br><br>
                             <label>Personal Information</label>
                             <input type="text" name=firstname class="form-control" placeholder="First Name" required>
@@ -157,9 +159,9 @@
 
             <!-- The displayed login/registered data -->
             <div class="modal-body">
-                    <!-- Login form, HIDE/DISPLAY on tabs toggle -->
+                <!-- Login form, HIDE/DISPLAY on tabs toggle -->
                 <div class="row">
-                    <div class="col-lg-8 col-centered" >
+                    <div class="col-lg-8 col-centered">
 
 
                     </div>
@@ -175,100 +177,134 @@
     </div>
 </div>
 
+<div id="newsletter-scroll-up" class="">
+    Subscribe to our newsletter:
+    <input type="text" id="newsletter-input" name="newsletter" placeholder="Enter email" autofocus>
+    <button type="button" class="close" onclick="closeNewsletter()">&times;</button>
+</div>
+
 <!-- The Main Container set to fluid to fill out the whole page
 Also a wrapper containing sidebar-wrapper and page-content-wrapper -->
 <div class="container-fluid" id="main-content-wrapper">
 
     <div class="jumbotron text-center" id="banner">
-        <br><br><br><br><br><br><h1>- Greenbox -</h1>
+        <br><br><br><br><br><br>
+        <h1>- Greenbox -</h1>
 
     </div>
 
     <!-- Page Content -->
     <div id="page-content-wrapper">
-            <div class="container-fluid">
-                <div class="row">
-                    <!-- Main Content Column -->
-                    <div class="col-lg-8">
-                        <h1>Main Content layout</h1>
-                        <p>
-                            What is Lorem Ipsum?
-                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+        <div class="container-fluid">
+            <div class="row">
+                <!-- Main Content Column -->
+                <div class="col-lg-8">
+                    <h1>Main Content layout</h1>
+                    <p>
+                        What is Lorem Ipsum?
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+                        the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
+                        of type and scrambled it to make a type specimen book. It has survived not only five centuries,
+                        but also the leap into electronic typesetting, remaining essentially unchanged. It was
+                        popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
+                        and more recently with desktop publishing software like Aldus PageMaker including versions of
+                        Lorem Ipsum.
 
-                            Why do we use it?
-                            It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
-                        </p>
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="jumbotron text-center">
-                                    <dl>
-                                        <h3>Our Vision</h3>
-                                        Where does it come from?
-                                        Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
-                                    </dl>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-8">
-                                <h2>Alert</h2>
-                                <div class="alert alert-success">This is an alert in the color of success!</div>
-                                <div class="alert alert-info fade in">
-                                    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times</a>Don't forget some birthday! I'm in the color of info!
-                                </div>
-                                <div class="alert alert-danger fade in">
-                                    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times</a>I'm danger baby, danger! Please don't close me
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <img src="resources/art.jpg" class="img-responsive img-rounded">
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-4">
-                                <img src="resources/art.jpg" class="img-responsive img-rounded">
-                            </div>
-                            <div class="col-md-8">
-                                <blockquote>
-                                    <h1>4 A wise man once said</h1>
-                                    <p>This is Erasmus baby!</p>
-                                    <p>The French Girls, yeyeyeye, always inviting</p>
-                                    <p>Is this wid?</p>
-                                    <footer>Lukas</footer>
-                                </blockquote>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-8">
-                                <h3>col-md-6</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-                                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
-                            </div>
-                            <div class="col-md-4">
-                                <img src="resources/art.jpg" class="img-responsive img-rounded">
-
+                        Why do we use it?
+                        It is a long established fact that a reader will be distracted by the readable content of a page
+                        when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal
+                        distribution of letters, as opposed to using 'Content here, content here', making it look like
+                        readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as
+                        their default model text, and a search for 'lorem ipsum' will uncover many web sites still in
+                        their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on
+                        purpose (injected humour and the like).
+                    </p>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="jumbotron text-center">
+                                <dl>
+                                    <h3>Our Vision</h3>
+                                    Where does it come from?
+                                    Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a
+                                    piece of classical Latin literature from 45 BC, making it over 2000 years old.
+                                    Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked
+                                    up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and
+                                    going through the cites of the word in classical literature, discovered the
+                                    undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de
+                                    Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45
+                                    BC. This book is a treatise on the theory of ethics, very popular during the
+                                    Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes
+                                    from a line in section 1.10.32.
+                                </dl>
                             </div>
                         </div>
                     </div>
-                    <!-- Right Side Column -->
-                    <div class="col-lg-4">
-                        <h1>Advertise layout</h1>
-                        <div class="col-lg-12 col-centered" id="social-media-div">
-                            <a class="btn btn-block btn-social btn-facebook">
-                                <span class="fa fa-facebook"></span> Follow us on Facebook!
-                            </a>
-                            <a class="btn btn-block btn-social btn-google">
-                                <span class="fa fa-google"></span> Google us!
-                            </a>
-                            <a class="btn btn-block btn-social btn-instagram">
-                                <span class="fa fa-instagram"></span> Follow us on Instagram!
-                            </a>
+                    <div class="row">
+                        <div class="col-md-8">
+                            <h2>Alert</h2>
+                            <div class="alert alert-success">This is an alert in the color of success!</div>
+                            <div class="alert alert-info fade in">
+                                <a href="#" class="close" data-dismiss="alert" aria-label="close">&times</a>Don't forget
+                                some birthday! I'm in the color of info!
+                            </div>
+                            <div class="alert alert-danger fade in">
+                                <a href="#" class="close" data-dismiss="alert" aria-label="close">&times</a>I'm danger
+                                baby, danger! Please don't close me
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <img src="resources/art.jpg" class="img-responsive img-rounded">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <img src="resources/art.jpg" class="img-responsive img-rounded">
+                        </div>
+                        <div class="col-md-8">
+                            <blockquote>
+                                <h1>4 A wise man once said</h1>
+                                <p>This is Erasmus baby!</p>
+                                <p>The French Girls, yeyeyeye, always inviting</p>
+                                <p>Is this wid?</p>
+                                <footer>Lukas</footer>
+                            </blockquote>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-8">
+                            <h3>col-md-6</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+                            <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+                        </div>
+                        <div class="col-md-4">
+                            <img src="resources/art.jpg" class="img-responsive img-rounded">
+
+                        </div>
+                    </div>
+                </div>
+                <!-- Right Side Column -->
+                <div class="col-lg-4">
+                    <h1>Advertise layout</h1>
+                    <div class="col-lg-12 col-centered" id="social-media-div">
+                        <a class="btn btn-block btn-social btn-facebook">
+                            <span class="fa fa-facebook"></span> Follow us on Facebook!
+                        </a>
+                        <a class="btn btn-block btn-social btn-google">
+                            <span class="fa fa-google"></span> Google us!
+                        </a>
+                        <a class="btn btn-block btn-social btn-instagram">
+                            <span class="fa fa-instagram"></span> Follow us on Instagram!
+                        </a>
+                        <div style="margin-top: 30px; background-color: rgba(255, 255, 102, .8); height:200px;">
+                            Subscribe to our newsletter:
+                            <input type="text" id="newsletter-input" name="newsletter" placeholder="Enter email" autofocus>
 
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
 </div>
 
 <!-- Bootstrap core JavaScript
@@ -283,7 +319,7 @@ Also a wrapper containing sidebar-wrapper and page-content-wrapper -->
 
 <!-- Multiple JQuery scripts -->
 <script>
-    $( function() {
+    $(function () {
         /**
          * Listen to scroll to change header opacity class
          */
@@ -305,7 +341,7 @@ Also a wrapper containing sidebar-wrapper and page-content-wrapper -->
     });
 
     // On clicking #menu-toggle
-    $("#menu-toggle").click( function (e) {
+    $("#menu-toggle").click(function (e) {
         // Prevent the link to go to the URL
         e.preventDefault();
         // menuDusplayed are referenced in sidebar.css
@@ -314,19 +350,35 @@ Also a wrapper containing sidebar-wrapper and page-content-wrapper -->
     });
 
     // On clicking #login-modal-trigger
-    $("#login-modal-trigger").click( function (e) {
+    $("#login-modal-trigger").click(function (e) {
         e.preventDefault();
     });
     // Tabs function in the Login/Register modal
-    $( function() {
+    $(function () {
         console.log("inside anon function to activate #log-reg-tabs")
-        $( "#log-reg-tabs" ).tab();
+        $("#log-reg-tabs").tab();
     });
 
     $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
         var target = $(e.target).attr("href") // activated tab
     });
 
+    // Javascript (not jquery) to scroll up newsletter on 150px scroll
+    window.onscroll = function () {
+        headerScroll()
+    };
+
+    var newsletter = document.getElementById("newsletter-scroll-up");
+    function headerScroll() {
+        if (document.body.scrollTop > 150 || document.documentElement.scrollTop > 150) {
+            newsletter.style.height = "50px";
+
+            console.log('scrolled 100px. newsletter height = ' + newsletter.style.height);
+        }
+    }
+    function closeNewsletter() {
+        newsletter.style.display = "none";
+    }
 
 </script>
 </body>
