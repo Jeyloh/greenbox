@@ -16,82 +16,71 @@
           crossorigin="anonymous">
 
 
-
     <!-- Personal css files -->
     <link rel="stylesheet" href="css/sidebar.css">
     <link rel="stylesheet" href="css/greenbox.css">
+    <link rel="stylesheet" href="css/headerscroll.css">
+    <!-- Social media bars and icons -->
+    <link rel="stylesheet" href="css/bootstrap-social.css">
+    <!-- FontAwesome provides stylish icons and fonts: http://fontawesome.io/examples/ -->
+    <link rel="stylesheet" href="css/font-awesome.css">
 
 </head>
 <body>
 <!-- Fixed Navigation Bar  -->
-<nav class="navbar navbar-default navbar-fixed-top">
+<nav class="navbar navbar-default navbar-fixed-top" id="fixed-navbar">
     <div class="container-fluid">
 
         <!-- Logo -->
         <div class="navbar-header">
-            <!-- Collapse mainNavBar button -->
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mainNavBar">
-                <span class="glyphicon glyphicon-th"></span>
-            </button>
-            <a href="#" class="navbar-brand"><kbd>GREENBOX</kbd></a>
+
+            <a href="#" class="navbar-brand"><img src="resources/images/greenhouse-logo.png"></a>
         </div>
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mainNavBar">
+            <span class="glyphicon glyphicon-th white"></span>
+        </button>
+
 
         <!-- Collapsable Menu Items -->
         <div class="collapse navbar-collapse" id="mainNavBar">
             <!-- Left Hand Side -->
-            <ul class="nav navbar-nav">
+            <ul class="nav navbar-nav" id="nav-list">
                 <li class="active"><a href="index.php">Home</a></li>
-                <li><a href="products.html">Our Boxes!</a></li>
+                <li><a href="products.php">Our Boxes!</a></li>
                 <li><a href="newbostonTutorial.php">TNB Tutorial</a></li>
                 <li><a href="login.php">Old Login</a></li>
-                <li><a href="reviews.html">Reviews</a></li>
-                <li><a href="faq.html">FAQ</a></li>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">My Profile<span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="#">Order Box</a></li>
-                        <li><a href="#">Settings</a></li>
-                    </ul>
-                </li>
-
+                <li><a href="reviews.php">Reviews</a></li>
+                <li><a href="faq.php">FAQ</a></li>
             </ul>
             <!-- Right Hand Side -->
             <ul class="nav navbar-nav navbar-right" id="right-nav">
                 <!-- A modal link to open the login-modal -->
-                <li><a href="#" class="btn btn-success" id="login-modal-trigger" data-target="#login-modal" data-toggle="modal">Login/Register</a></li>
-                <li><a href="#" class="btn btn-info" id="menu-toggle">Toggle Menu</a></li>
 
-            </ul>
-            <ul class="nav navbar-nav navbar-right">
-            <!-- NavBar PHP code to check if user is admin and add appropriate menu items,
-            then add either login/register or logout if the user is logged in or not -->
-            <?php
+
+                <?php
                 session_start();
                 include('connect.php');
                 include('functions.php');
-                if(isLoggedIn()) {
+                if (isLoggedIn()) {
                     // TODO: Add these items to the navbar on the right side!
-                    if($_SESSION['admin'] == true) {
+                    if ($_SESSION['admin'] == true) {
                         echo('<li><a href="adminpage.php">Admin HUB</a></li>');
                         echo('<li><a href="#">Add Box</a></li>');
-                    } 
-                    else {
+                    } else {
                         echo('<li><a href="userpage.php">User Home</a></li>');
                         echo('<li><a href="#">Subscribe</a></li>');
                     }
                 }
-
-                        
                 // Check if the user is logged in and set logout or login as appropriate
-                if(isLoggedIn()) {
-                    echo('<li><a href="logout.php" class="btn btn-danger" id="login-modal-trigger" data-target="#login-modal" data-toggle="modal">Log Out</a></li>');
-                } 
-                else {
-                    echo('<li><a href="#" class="btn btn-success" id="login-modal-trigger" data-target="#login-modal" data-toggle="modal">Login/Register</a></li>');
+                if (isLoggedIn()) {
+                    echo('<li><a href="logout.php" id="logout-btn">Log Out</a></li>');
+                } else {
+                    echo('<li><a href="#" id="login-modal-trigger" data-target="#login-modal" data-toggle="modal">Login/Register</a></li>');
                 }
-            ?>
+                ?>
             </ul>
         </div>
+        <h1 class="white" id="header-text"><!-- Add Header here instead?--></h1>
     </div>
 </nav>
 
@@ -105,49 +94,74 @@
             <div class="modal-header" id="log-reg-tabs">
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
                 <!-- Tabs for displaying either Login or Register data -->
-                <ul>
-                    <li><a href="#login-tab">Login</a></li>
-                    <li><a href="#register-tab">Register</a></li>
-
+                <ul id="tab-bar" class="nav nav-tabs">
+                    <li class="active"><a href="#login-tab" data-toggle="tab">Login</a></li>
+                    <li class=""><a href="#register-tab" data-toggle="tab">Register</a></li>
                 </ul>
-                <div id="login-tab">
-                    <form class="form-signin" action="processLogin.php">
-                        <h2 class="form-signin-heading">Please sign in</h2>
-                        <label for="inputEmail" class="sr-only">Email/Username</label>
-                        <input type="text" id="inputEmail" name="loginusername" class="form-control" placeholder="Email address" required autofocus>
-                        <label for="inputPassword" class="sr-only">Password</label>
-                        <input type="password" id="inputPassword" name="loginpassword" class="form-control" placeholder="Password" required>
-                        <div class="checkbox">
-                            <label>
-                                <input type="checkbox" value="remember-me"> Remember me
-                            </label>
-                        </div>
-                        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
-                    </form>
-                </div>
-                <div id="register-tab">
-                    <form class="form-signin" action="processLogin.php">
-                        <h2 class="form-signin-heading">Register here</h2>
-                        <input type=text name=registerusername size=30 placeholder="Username"><br>
-                        <input type=password name=registerpassword size=30 placeholder="Password"><br>
-                        <input type=password name=confirmpassword size=30 placeholder="Confirm Password"><br>
-                        <input type=text name=firstname size=30 placeholder="First Name"><br>
-                        <input type=text name=lastname size=30 placeholder="Surname"><br>
-                        <div class="checkbox">
-                            <label>
-                                <input type="checkbox" value="remember-me"> Remember me
-                            </label>
-                        </div>
-                        <button class="btn btn-lg btn-primary btn-block" type="submit">Register</button>
-                    </form>
+                <div id="tab-bar-content" class="tab-content">
+                    <!-- The Login tab proceeding to processLogin.php-->
+                    <div class="tab-pane fade active in" id="login-tab">
+                        <form class="form-signin" method="POST" action="processLogin.php">
+                            <h2 class="form-signin-heading">Please sign in</h2>
+                            <label for="inputEmail" class="sr-only">Email/Username</label>
+                            <input type="text" id="inputEmail" name="loginusername" class="form-control"
+                                   placeholder="Email address" required autofocus>
+                            <label for="inputPassword" class="sr-only">Password</label>
+                            <input type="password" id="inputPassword" name="loginpassword" class="form-control"
+                                   placeholder="Password" required>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" value="remember-me"> Remember me
+                                </label>
+                            </div>
+                            <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+                        </form>
+                    </div>
+                    <!-- The Register tab proceeding to processRegister.php -->
+                    <div class="tab-pane fade in" id="register-tab">
+                        <form class="form-register" method="POST" action="processRegister.php">
+                            <h2 class="form-signin-heading">Register here</h2>
+                            <br><br>
+                            <label>User Information</label>
+                            <input type="text" name=registerusername class="form-control" placeholder="Username"
+                                   required autofocus>
+                            <input type="password" name=registerpassword class="form-control" placeholder="Password"
+                                   required>
+                            <input type="password" name=confirmpassword class="form-control"
+                                   placeholder="Confirm Password" required>
+                            <br><br>
+                            <label>Personal Information</label>
+                            <input type="text" name=firstname class="form-control" placeholder="First Name" required>
+                            <input type="text" name=lastname class="form-control" placeholder="Surname" required>
+                            <input type="text" name=phone class="form-control" placeholder="Phone" required>
+                            <input type="text" name=email class="form-control" placeholder="E-mail" required>
+                            <br><br>
+                            <label>Shipping Address</label>
+                            <input type="text" name=address class="form-control" placeholder="Address">
+                            <select class="form-control" id="country">
+                                <option value="Country" disabled="disabled" selected>Country</option>
+                                <option value="AF">Norway</option>
+                                <option value="AX">Ireland</option>
+                                <option value="AL">USA</option>
+                                <option value="DZ">Spain</option>
+                            </select>
+                            <input type="text" name=zip class="form-control" placeholder="Address">
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" name="admin" value="admin"> Are you Admin?
+                                </label>
+                            </div>
+                            <button class="btn btn-lg btn-primary btn-block" type="submit">Register</button>
+                        </form>
+                    </div>
                 </div>
             </div>
 
             <!-- The displayed login/registered data -->
             <div class="modal-body">
-                    <!-- Login form, HIDE/DISPLAY on tabs toggle -->
+                <!-- Login form, HIDE/DISPLAY on tabs toggle -->
                 <div class="row">
-                    <div class="col-lg-8 col-centered" >
+                    <div class="col-lg-8 col-centered">
 
 
                     </div>
@@ -162,21 +176,32 @@
         </div>
     </div>
 </div>
-<!-- MAIN CONTENT FOR CURRENT PAGE HERE -->
-<div class="container-fluid" id="wrapper" style="margin-top:50px">
-    <!-- Responsive Sidebar -->
-    <div id="sidebar-wrapper">
-        <ul class="sidebar-nav">
-            <li><a href="#">Settings</a></li>
-            <li><a href="#">Login</a></li>
-            <li><a href="#">Register</a></li>
-        </ul>
+
+<div id="newsletter-scroll-up" class="">
+    Subscribe to our newsletter:
+    <input type="text" id="newsletter-input" name="newsletter" placeholder="Enter email" autofocus>
+    <button type="button" class="close" onclick="closeNewsletter()">&times;</button>
+</div>
+
+<!-- The Main Container set to fluid to fill out the whole page
+Also a wrapper containing sidebar-wrapper and page-content-wrapper -->
+<div class="container-fluid" id="main-content-wrapper">
+
+    <div class="jumbotron text-center" id="banner">
+        <br><br><br><br><br><br>
+        <h1>- Greenbox -</h1>
+
     </div>
 
+    <!-- Page Content -->
+    <div id="page-content-wrapper">
+        <div class="container-fluid">
+        <!-- TEMPLATE ENDS HERE -->
 
 
 
-
+        </div>
+    </div>
 </div>
 
 <!-- Bootstrap core JavaScript
@@ -191,34 +216,66 @@
 
 <!-- Multiple JQuery scripts -->
 <script>
+    $(function () {
+        /**
+         * Listen to scroll to change header opacity class
+         */
+        function checkScroll() {
+            var startY = $('.navbar').height() * 3; //The point where the navbar changes in px
+
+            if ($(window).scrollTop() > startY) {
+                $('.navbar').addClass("scrolled");
+            } else {
+                $('.navbar').removeClass("scrolled");
+            }
+        }
+
+        if ($('.navbar').length > 0) {
+            $(window).on("scroll load resize", function () {
+                checkScroll();
+            });
+        }
+    });
+
     // On clicking #menu-toggle
-    $("#menu-toggle").click( function (e) {
+    $("#menu-toggle").click(function (e) {
         // Prevent the link to go to the URL
         e.preventDefault();
         // menuDusplayed are referenced in sidebar.css
-        $("#wrapper").toggleClass("menuDisplayed");
+        $("#main-content-wrapper").toggleClass("menuDisplayed");
 
     });
 
-    // On clicking #menu-toggle
-    $("#login-modal-trigger").click( function (e) {
-        // Prevent the link to go to the URL
+    // On clicking #login-modal-trigger
+    $("#login-modal-trigger").click(function (e) {
         e.preventDefault();
     });
-
     // Tabs function in the Login/Register modal
-    $( function() {
+    $(function () {
         console.log("inside anon function to activate #log-reg-tabs")
-        $( "#log-reg-tabs" ).tab();
+        $("#log-reg-tabs").tab();
     });
 
-    $(document).ready(function(){
-        activeTab('login-tab');
+    $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+        var target = $(e.target).attr("href") // activated tab
     });
 
-    function activeTab(tab){
-        $('#log-reg-tabs a[href="#' + tab + '"]').tab('show');
+    // Javascript (not jquery) to scroll up newsletter on 150px scroll
+    window.onscroll = function () {
+        headerScroll()
     };
+
+    var newsletter = document.getElementById("newsletter-scroll-up");
+    function headerScroll() {
+        if (document.body.scrollTop > 150 || document.documentElement.scrollTop > 150) {
+            newsletter.style.height = "50px";
+
+            console.log('scrolled 100px. newsletter height = ' + newsletter.style.height);
+        }
+    }
+    function closeNewsletter() {
+        newsletter.style.display = "none";
+    }
 
 </script>
 </body>

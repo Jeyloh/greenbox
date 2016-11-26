@@ -6,12 +6,20 @@
     color:white;
     transition: all .8s ease-out;
 }
-#login-modal-trigger {
+
+.green-background {
     background-color:lightgreen;
-}#login-modal-trigger:hover{background-color:darkgray;}
-#logout-btn {
+}
+
+.orange-background {
     background-color:darkorange;
-} #logout-btn:hover{background-color:darkgray;}
+}
+
+.blue-background {
+    background-color:#99c2ff;
+} 
+.grayhover:hover{background-color:darkgray;}
+
 .active a{
     text-decoration: underline;
     background-color: transparent;
