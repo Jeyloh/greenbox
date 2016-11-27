@@ -1,4 +1,9 @@
 # The Greenbox 
+To run this PHP project you will need a server running in the background. 
+I have been using http://www.usbwebserver.net/en/download.php but other tools like xampp or a 
+live server will work too.
+
+
 Wireframe Productview: https://wireframe.cc/Tfe9k0 
 
 Wireframe Mobile: https://wireframe.cc/3ACC3T 
