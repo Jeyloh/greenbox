@@ -5,15 +5,17 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Latest compiled and minified CSS -->
+    <!-- Latest compiled and minified CSS
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
           integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
-          crossorigin="anonymous">
+          crossorigin="anonymous">-->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
 
-    <!-- Optional theme -->
+    <!-- Optional theme -
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
           integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
-          crossorigin="anonymous">
+          crossorigin="anonymous">->
 
     <!-- Font -->
     <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
@@ -36,7 +38,7 @@
 
         <!-- Logo -->
         <div class="navbar-header">
-            <a href="#" class="navbar-brand"><img src="resources/images/greenhouse-logo.png"></a>
+            <a href="#" class="navbar-brand"><img id="logo" src="resources/greenbox-logo.jpg"></a>
         </div>
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mainNavBar">
             <span class="glyphicon glyphicon-th white"></span>
@@ -49,8 +51,7 @@
             <ul class="nav navbar-nav" id="nav-list">
                 <li><a href="index.php">Home</a></li>
                 <li><a href="products.php">Our Boxes!</a></li>
-                <li><a href="newbostonTutorial.php">TNB Tutorial</a></li>
-                <li><a href="login.php">Old Login</a></li>
+                <li><a href="news.php">News</a></li>
                 <li><a href="reviews.php">Reviews</a></li>
                 <li><a href="faq.php">FAQ</a></li>
             </ul>

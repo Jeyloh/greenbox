@@ -41,14 +41,6 @@ function insertRecord($record, $connection) {
     }
 }
 
-/* 5 TABLES: User, subscription, VegetablePackage, VegetableToPackage, Vegetable
-  All filled with test data to support the whole system, filling up one package. 
-  
-  One Subscription has One User
-  One Subscription has one VegetablePackage
-
- */
-
 /* CREATE TABLE subscription AND ADD TEST DATA */
 $subscription_table = "CREATE TABLE IF NOT EXISTS Subscription(
 subscriptionId INT NOT NULL AUTO_INCREMENT,

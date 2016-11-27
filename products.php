@@ -1,48 +1,39 @@
-<?php $title = "Products"; include("top.php");?>
+<?php $title = "Products"; include("top.php");
+
+
+
+?>
 
 <div class="container">
-	<div class="row products-row">
-	    <div class="col-md-8">
-	        <h2>Alert</h2>
-	        <div class="alert alert-success">This is an alert in the color of success!</div>
-	        <div class="alert alert-info fade in">
-	            <a href="#" class="close" data-dismiss="alert" aria-label="close">&times</a>Don't forget
-	            some birthday! I'm in the color of info!
-	        </div>
-	        <div class="alert alert-danger fade in">
-	            <a href="#" class="close" data-dismiss="alert" aria-label="close">&times</a>I'm danger
-	            baby, danger! Please don't close me
-	        </div>
-	    </div>
-	    <div class="col-md-4">
-	        <img src="resources/art.jpg" class="img-responsive img-rounded">
-	    </div>
-	</div>
-	<div class="row products-row">
-	    <div class="col-md-4">
-	        <img src="resources/art.jpg" class="img-responsive img-rounded">
-	    </div>
-	    <div class="col-md-8">
-	        <blockquote>
-	            <h1>4 A wise man once said</h1>
-	            <p>This is Erasmus baby!</p>
-	            <p>The French Girls, yeyeyeye, always inviting</p>
-	            <p>Is this wid?</p>
-	            <footer>Lukas</footer>
-	        </blockquote>
-	    </div>
-	</div>
-	<div class="row products-row">
-	    <div class="col-md-8">
-	        <h3>col-md-6</h3>
-	        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-	        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
-	    </div>
-	    <div class="col-md-4">
-	        <img src="resources/art.jpg" class="img-responsive img-rounded">
+<h1>Our Greenboxes</h1>
+	<p>This is an overview of our boxes!</p>
 
-	    </div>
-	</div>
+		<?php
+		include('connect.php');
+		global $con;
+
+		$sql_vegPackage = "SELECT * FROM VegetablePackage";
+		$result_vegPackage = $con->query($sql_vegPackage);
+
+
+
+		while ($listOfBoxes = mysqli_fetch_assoc($result_vegPackage)) {
+			echo '<div class="row products-row">';
+				echo '<div class="col-md-8">';
+					echo '<h2>' . $listOfBoxes["packageSalesName"] . '</h2>';
+					echo '<p>' .  $listOfBoxes["description"]  . '</p>';
+					echo '<h1>' .  $listOfBoxes["price"]  . '</h1>';
+					echo '<button type="button" class="btn btn-success btn-lg ">Subscribe to product</button>'; //TODO: Activate subscription in DB and take to user page!
+				echo '</div>';
+
+				echo '<div class="col-md-4" style="background: url("");>'; //linear-gradient(to left, rgba(255, 255, 255, 0) 0, rgba(255, 255, 255, 1) 240px, rgba(255, 255, 255, 1) 290px),
+					echo '<img class="img-responsive img-rounded" src="'.$listOfBoxes["imageLink"].'">';
+				echo '</div>';
+
+			echo '</div>';
+		}
+		?>
+
 </div>
 
 

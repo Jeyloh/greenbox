@@ -2,14 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c17a123f-c067-482e-bf29-059edb8ddeee" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/addGreenbox.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modifyVegPack.php" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bootstrap-template.php" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/faq.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/news.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/modifyVegPack.php" afterPath="$PROJECT_DIR$/invokeAjax.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/adminpage.php" afterPath="$PROJECT_DIR$/adminpage.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/greenbox.css" afterPath="$PROJECT_DIR$/css/greenbox.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/functions.php" afterPath="$PROJECT_DIR$/functions.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/processLogin.php" afterPath="$PROJECT_DIR$/processLogin.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database-setup.php" afterPath="$PROJECT_DIR$/database-setup.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/greenbox.js" afterPath="$PROJECT_DIR$/js/greenbox.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/products.php" afterPath="$PROJECT_DIR$/products.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/top.php" afterPath="$PROJECT_DIR$/top.php" />
     </list>
     <ignored path="untitled1.iws" />
@@ -39,99 +40,128 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="processRegister.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/processRegister.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="551">
-              <caret line="106" column="8" selection-start-line="106" selection-start-column="4" selection-end-line="106" selection-end-column="8" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="processLogin.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/processLogin.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="160">
-              <caret line="8" column="25" selection-start-line="8" selection-start-column="25" selection-end-line="9" selection-end-column="12" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="top.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/top.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="301">
-              <caret line="64" column="0" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
+            <state relative-caret-position="440">
+              <caret line="181" column="70" selection-start-line="181" selection-start-column="61" selection-end-line="181" selection-end-column="70" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="connect.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/connect.php">
+      <file leaf-file-name="bottom.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bottom.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="140">
-              <caret line="7" column="58" selection-start-line="7" selection-start-column="58" selection-end-line="7" selection-end-column="58" />
+            <state relative-caret-position="520">
+              <caret line="35" column="88" selection-start-line="35" selection-start-column="88" selection-end-line="35" selection-end-column="88" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="adminpage.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="faq.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/faq.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="580">
+              <caret line="53" column="58" selection-start-line="53" selection-start-column="58" selection-end-line="53" selection-end-column="58" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="greenbox.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/js/greenbox.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="500">
+              <caret line="61" column="0" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="news.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/news.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-140">
+              <caret line="5" column="94" selection-start-line="5" selection-start-column="94" selection-end-line="5" selection-end-column="94" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="469">
+              <caret line="46" column="12" selection-start-line="46" selection-start-column="12" selection-end-line="55" selection-end-column="18" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="greenbox.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/css/greenbox.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="680">
+              <caret line="199" column="12" selection-start-line="199" selection-start-column="12" selection-end-line="199" selection-end-column="12" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="adminpage.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/adminpage.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="362">
-              <caret line="102" column="6" selection-start-line="102" selection-start-column="6" selection-end-line="102" selection-end-column="6" />
+            <state relative-caret-position="460">
+              <caret line="90" column="49" selection-start-line="90" selection-start-column="49" selection-end-line="90" selection-end-column="49" />
               <folding>
-                <marker date="1480269986770" expanded="true" signature="2192:2436" ph="..." />
-                <marker date="1480269986770" expanded="true" signature="2202:2422" ph="..." />
-                <marker date="1480269986770" expanded="true" signature="2449:2842" ph="..." />
-                <marker date="1480269986770" expanded="true" signature="2450:2842" ph="..." />
-                <marker date="1480269986770" expanded="true" signature="3863:3870" ph="×" />
-                <marker date="1480269986770" expanded="true" signature="4001:4008" ph="×" />
-                <marker date="1480269986770" expanded="true" signature="4054:4891" ph="..." />
+                <marker date="1480281444065" expanded="true" signature="2975:3408" ph="..." />
+                <marker date="1480281444065" expanded="true" signature="3000:3379" ph="..." />
+                <marker date="1480281444065" expanded="true" signature="3436:3938" ph="..." />
+                <marker date="1480281444065" expanded="true" signature="3437:3938" ph="..." />
+                <marker date="1480281444065" expanded="true" signature="5271:5278" ph="×" />
+                <marker date="1480281444065" expanded="true" signature="5431:5438" ph="×" />
+                <marker date="1480281444065" expanded="true" signature="5514:9188" ph="..." />
+                <marker date="1480281444065" expanded="true" signature="5756:6185" ph="..." />
+                <marker date="1480281444065" expanded="true" signature="5781:6156" ph="..." />
+                <marker date="1480281444065" expanded="true" signature="6132:6151" ph="..." />
+                <marker date="1480281444065" expanded="true" signature="6213:6241" ph="..." />
+                <marker date="1480281444065" expanded="true" signature="6213:6324" ph="..." />
+                <marker date="1480281444065" expanded="true" signature="6940:7053" ph="..." />
+                <marker date="1480281444065" expanded="true" signature="7704:7711" ph="×" />
+                <marker date="1480281444065" expanded="true" signature="7922:9155" ph="..." />
+                <marker date="1480281444065" expanded="true" signature="8011:8266" ph="{...}" />
+                <marker date="1480281444065" expanded="true" signature="8032:8054" ph="{...}" />
+                <marker date="1480281444065" expanded="true" signature="8032:8254" ph="{&quot;url&quot;: 'invokeAjax.php'...}" />
+                <marker date="1480281444065" expanded="true" signature="8186:8240" ph="{...}" />
+                <marker date="1480281444065" expanded="true" signature="8303:8673" ph="{...}" />
+                <marker date="1480281444065" expanded="true" signature="8303:8716" ph="{...}" />
+                <marker date="1480281444065" expanded="true" signature="8324:8673" ph="{&quot;url&quot;: 'invokeAjax.php'...}" />
+                <marker date="1480281444065" expanded="true" signature="8488:8673" ph="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="modifyVegPack.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/modifyVegPack.php">
+      <file leaf-file-name="products.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/products.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="700">
-              <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="480">
+              <caret line="25" column="170" selection-start-line="25" selection-start-column="170" selection-end-line="25" selection-end-column="170" />
+              <folding>
+                <marker date="1480285308818" expanded="true" signature="76:444" ph="..." />
+                <marker date="1480285308818" expanded="true" signature="838:854" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="newbostonTutorial.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/newbostonTutorial.php">
+      <file leaf-file-name="headerscroll.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/css/headerscroll.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="78" column="0" selection-start-line="78" selection-start-column="0" selection-end-line="103" selection-end-column="12" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="addGreenbox.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/addGreenbox.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="181">
-              <caret line="19" column="33" selection-start-line="19" selection-start-column="33" selection-end-line="19" selection-end-column="33" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="functions.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/functions.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="26" column="27" selection-start-line="26" selection-start-column="27" selection-end-line="26" selection-end-column="27" />
+            <state relative-caret-position="280">
+              <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -157,17 +187,22 @@
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/index.php" />
-        <option value="$PROJECT_DIR$/products.php" />
         <option value="$PROJECT_DIR$/bottom.php" />
-        <option value="$PROJECT_DIR$/js/greenbox.js" />
-        <option value="$PROJECT_DIR$/css/greenbox.css" />
         <option value="$PROJECT_DIR$/functions.php" />
         <option value="$PROJECT_DIR$/displayGreenbox.php" />
-        <option value="$PROJECT_DIR$/adminpage.php" />
         <option value="$PROJECT_DIR$/addGreenbox.php" />
-        <option value="$PROJECT_DIR$/top.php" />
         <option value="$PROJECT_DIR$/processLogin.php" />
         <option value="$PROJECT_DIR$/bootstrap-template.php" />
+        <option value="$PROJECT_DIR$/modifyVegPack.php" />
+        <option value="$PROJECT_DIR$/database-setup.php" />
+        <option value="$PROJECT_DIR$/invokeAjax.php" />
+        <option value="$PROJECT_DIR$/news.php" />
+        <option value="$PROJECT_DIR$/top.php" />
+        <option value="$PROJECT_DIR$/adminpage.php" />
+        <option value="$PROJECT_DIR$/products.php" />
+        <option value="$PROJECT_DIR$/faq.php" />
+        <option value="$PROJECT_DIR$/css/greenbox.css" />
+        <option value="$PROJECT_DIR$/js/greenbox.js" />
       </list>
     </option>
   </component>
@@ -228,6 +263,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="greenbox" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="greenbox" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="greenbox" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -307,12 +356,12 @@
       <workItem from="1479596732124" duration="93000" />
       <workItem from="1479646526844" duration="3419000" />
       <workItem from="1479650035219" duration="8928000" />
-      <workItem from="1480027199014" duration="33934000" />
+      <workItem from="1480027199014" duration="49142000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="46374000" />
+    <option name="totallyTimeSpent" value="61582000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -391,6 +440,7 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="180">
             <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+            <folding />
           </first_editor>
           <second_editor />
         </state>
@@ -406,60 +456,10 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html" />
-    <entry file="file://$PROJECT_DIR$/bottom.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="593">
-          <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/greenbox.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1240">
-          <caret line="62" column="77" selection-start-line="62" selection-start-column="77" selection-end-line="62" selection-end-column="77" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/css/sidebar.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="47" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1280">
-          <caret line="64" column="16" selection-start-line="64" selection-start-column="16" selection-end-line="64" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/products.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="700">
-          <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/headerscroll.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="580">
-          <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/greenbox.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="720">
-          <caret line="153" column="0" selection-start-line="153" selection-start-column="0" selection-end-line="153" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -472,50 +472,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/processRegister.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="551">
-          <caret line="106" column="8" selection-start-line="106" selection-start-column="4" selection-end-line="106" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/newbostonTutorial.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="78" column="0" selection-start-line="78" selection-start-column="0" selection-end-line="103" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modifyVegPack.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="700">
-          <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/addGreenbox.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="181">
           <caret line="19" column="33" selection-start-line="19" selection-start-column="33" selection-end-line="19" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/top.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="301">
-          <caret line="64" column="0" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/functions.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="26" column="27" selection-start-line="26" selection-start-column="27" selection-end-line="26" selection-end-column="27" />
           <folding />
         </state>
       </provider>
@@ -536,19 +496,150 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/newbostonTutorial.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="78" column="0" selection-start-line="78" selection-start-column="0" selection-end-line="103" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database-setup.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="720">
+          <caret line="78" column="16" selection-start-line="78" selection-start-column="0" selection-end-line="78" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/invokeAjax.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="520">
+          <caret line="35" column="21" selection-start-line="35" selection-start-column="21" selection-end-line="35" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/functions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="26" column="27" selection-start-line="26" selection-start-column="27" selection-end-line="26" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/processRegister.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="551">
+          <caret line="106" column="8" selection-start-line="106" selection-start-column="4" selection-end-line="106" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bottom.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="520">
+          <caret line="35" column="88" selection-start-line="35" selection-start-column="88" selection-end-line="35" selection-end-column="88" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="469">
+          <caret line="46" column="12" selection-start-line="46" selection-start-column="12" selection-end-line="55" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/news.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-140">
+          <caret line="5" column="94" selection-start-line="5" selection-start-column="94" selection-end-line="5" selection-end-column="94" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/headerscroll.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/adminpage.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="362">
-          <caret line="102" column="6" selection-start-line="102" selection-start-column="6" selection-end-line="102" selection-end-column="6" />
+        <state relative-caret-position="460">
+          <caret line="90" column="49" selection-start-line="90" selection-start-column="49" selection-end-line="90" selection-end-column="49" />
           <folding>
-            <marker date="1480269986770" expanded="true" signature="2192:2436" ph="..." />
-            <marker date="1480269986770" expanded="true" signature="2202:2422" ph="..." />
-            <marker date="1480269986770" expanded="true" signature="2449:2842" ph="..." />
-            <marker date="1480269986770" expanded="true" signature="2450:2842" ph="..." />
-            <marker date="1480269986770" expanded="true" signature="3863:3870" ph="×" />
-            <marker date="1480269986770" expanded="true" signature="4001:4008" ph="×" />
-            <marker date="1480269986770" expanded="true" signature="4054:4891" ph="..." />
+            <marker date="1480281444065" expanded="true" signature="2975:3408" ph="..." />
+            <marker date="1480281444065" expanded="true" signature="3000:3379" ph="..." />
+            <marker date="1480281444065" expanded="true" signature="3436:3938" ph="..." />
+            <marker date="1480281444065" expanded="true" signature="3437:3938" ph="..." />
+            <marker date="1480281444065" expanded="true" signature="5271:5278" ph="×" />
+            <marker date="1480281444065" expanded="true" signature="5431:5438" ph="×" />
+            <marker date="1480281444065" expanded="true" signature="5514:9188" ph="..." />
+            <marker date="1480281444065" expanded="true" signature="5756:6185" ph="..." />
+            <marker date="1480281444065" expanded="true" signature="5781:6156" ph="..." />
+            <marker date="1480281444065" expanded="true" signature="6132:6151" ph="..." />
+            <marker date="1480281444065" expanded="true" signature="6213:6241" ph="..." />
+            <marker date="1480281444065" expanded="true" signature="6213:6324" ph="..." />
+            <marker date="1480281444065" expanded="true" signature="6940:7053" ph="..." />
+            <marker date="1480281444065" expanded="true" signature="7704:7711" ph="×" />
+            <marker date="1480281444065" expanded="true" signature="7922:9155" ph="..." />
+            <marker date="1480281444065" expanded="true" signature="8011:8266" ph="{...}" />
+            <marker date="1480281444065" expanded="true" signature="8032:8054" ph="{...}" />
+            <marker date="1480281444065" expanded="true" signature="8032:8254" ph="{&quot;url&quot;: 'invokeAjax.php'...}" />
+            <marker date="1480281444065" expanded="true" signature="8186:8240" ph="{...}" />
+            <marker date="1480281444065" expanded="true" signature="8303:8673" ph="{...}" />
+            <marker date="1480281444065" expanded="true" signature="8303:8716" ph="{...}" />
+            <marker date="1480281444065" expanded="true" signature="8324:8673" ph="{&quot;url&quot;: 'invokeAjax.php'...}" />
+            <marker date="1480281444065" expanded="true" signature="8488:8673" ph="{...}" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/top.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="181" column="70" selection-start-line="181" selection-start-column="61" selection-end-line="181" selection-end-column="70" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/products.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="25" column="170" selection-start-line="25" selection-start-column="170" selection-end-line="25" selection-end-column="170" />
+          <folding>
+            <marker date="1480285308818" expanded="true" signature="76:444" ph="..." />
+            <marker date="1480285308818" expanded="true" signature="838:854" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/faq.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="580">
+          <caret line="53" column="58" selection-start-line="53" selection-start-column="58" selection-end-line="53" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/greenbox.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="680">
+          <caret line="199" column="12" selection-start-line="199" selection-start-column="12" selection-end-line="199" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/greenbox.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="500">
+          <caret line="61" column="0" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

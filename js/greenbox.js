@@ -60,6 +60,14 @@ function closeNewsletter() {
 }
 
 
+$(document).ready(function() {
+
+    $('#faq-section').find('.faq-title').click(function(){
+        //Expand or collapse this panel
+        $(this).next().slideToggle('slow');
+    });
+});
+
 // Google MAPS https://bootstrapious.com/p/google-maps-and-bootstrap-tutorial
 
 var GmapAPI = "AIzaSyD8xFGLqm2yn96v0FWWbHmgLJSJaKuyjWM";
@@ -76,7 +84,7 @@ $(function () {
             zoom: 16,
             panControl: false,
             mapTypeId: google.maps.MapTypeId.ROADMAP
-        }
+        };
         var map = new google.maps.Map(mapCanvas, mapOptions);
 
     }
