@@ -5,9 +5,9 @@
 
 <?php
 session_start();
-include_once('connect.php');
+require('connect.php');
 include('functions.php');
-$con = new mysqli($servername, $username, $password, $db);
+global $con;
 
 $username=protectData($_POST['loginusername']);
 $password=protectData($_POST['loginpassword']);
@@ -42,13 +42,22 @@ if ($result->num_rows == 1) {
 	$result->close();
 }
 else {
-    header("location:login.php");   // Re-direct to the Login form script
-	echo "Wrong Username or Password";
+    ?>
+
+    <?php
+    header("location:index.php");   // Re-direct to the Login form script
+    //TODO: Add function to redirect into the modal
     echo "<br>Error logging in: " . $con->error;
 	$result->close();
 }
 
 ?>
+
+<script>
+    function loginFalse {
+
+    }
+</script>
 
 </body>
 </html>

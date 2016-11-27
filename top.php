@@ -62,7 +62,6 @@
                 include('connect.php');
                 include('functions.php');
                 if (isLoggedIn()) {
-                    // TODO: Add these items to the navbar on the right side!
                     if ($_SESSION['admin'] == true) {
                         echo('<li><a href="adminpage.php" class="blue-background">Admin HUB</a></li>');
                     } else {

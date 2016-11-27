@@ -25,7 +25,7 @@ function encryptPassword($pwToEncrypt) {
 
 function isAdmin() {
     include('connect.php');
-    $con = new mysqli("localhost", "root", "usbw", "greenbox");
+    global $con;
 
     $username = $_SESSION['user'];
     $adminStatus = "SELECT adminStatus FROM User WHERE userId='$username'";
@@ -62,6 +62,12 @@ function checkUserLogin($myusername, $mypassword) {
 function insertIntoUser($username, $encryptedPassword, $isAdmin, $fname, $lname, $phone, $mail, $address, $country, $zip){
 	$query = "INSERT INTO User(userId, password, adminStatus, firstName, lastName, phone, email, address, country, zip) 
 VALUES('$username', '$encryptedPassword', '$isAdmin', '$fname', '$lname','$phone', '$mail', '$address', '$country', '$zip')";
+	return $query;
+}
+
+function insertIntoVegetablePackage($name, $price, $desc, $veg1, $veg2, $veg3, $veg4, $veg5, $img){
+	$query = "INSERT INTO VegetablePackage(packageSalesName, price, description, vegetable1, vegetable2, vegetable3, vegetable4, vegetable5, imageLink) 
+VALUES('$name', '$price', '$desc', '$veg1','$veg2', '$veg3', '$veg4', '$veg5', '$img')";
 	return $query;
 }
 

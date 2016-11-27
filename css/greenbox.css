@@ -18,6 +18,10 @@ body {
     color:white;
 }
 
+input:hover, input:active {
+    border: green solid 2px;
+}
+
 /* Self made to center col classes */
 .col-centered{
     float: none;
@@ -143,4 +147,8 @@ body {
     margin-bottom:50px;
 
 
+}
+
+textarea#description {
+    resize: vertical;
 }
