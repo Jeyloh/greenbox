@@ -3,7 +3,7 @@
 
     <!-- Main Content Column -->
     <div class="col-lg-8">
-        <h1>Greenbox.</h1>
+        <h1>Greenbox</h1>
         <p>
             What is Lorem Ipsum?
             Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
@@ -13,7 +13,7 @@
             popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
             and more recently with desktop publishing software like Aldus PageMaker including versions of
             Lorem Ipsum.
-
+        </p><p>
             Why do we use it?
             It is a long established fact that a reader will be distracted by the readable content of a page
             when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal
@@ -24,37 +24,43 @@
             purpose (injected humour and the like).
         </p>
         <div class="row">
+            <br><br>
             <div class="col-md-12">
                 <div class="jumbotron text-center">
-                    <dl>
-                        <h3>Our Vision</h3>
-                        Where does it come from?
-                        Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a
-                        piece of classical Latin literature from 45 BC, making it over 2000 years old.
-                        Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked
-                        up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and
-                        going through the cites of the word in classical literature, discovered the
-                        undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de
-                        Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45
-                        BC. This book is a treatise on the theory of ethics, very popular during the
-                        Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes
-                        from a line in section 1.10.32.
-                    </dl>
+                    <div class="row">
+                        <div class="col-md-2" style="font-variant: small-caps; letter-spacing:.1em">
+                            <h3>Our Vision</h3>
+                        </div>
+                        <dl>
+                            <div class="col-md-10" style="">
+                                Where does it come from?
+                                Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a
+                                piece of classical Latin literature from 45 BC, making it over 2000 years old.
+                                Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked
+                                up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and
+                                going through the cites of the word in classical literature, discovered the
+                                undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de
+                                Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45
+                                BC. This book is a treatise on the theory of ethics, very popular during the
+                                Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes
+                                from a line in section 1.10.32.
+                            </div>
+                        </dl>
+                        </div>
                 </div>
             </div>
         </div>   
         <div class="row">
             <div class="col-md-4">
-                <div class="newsarticle-sm">Large WellLarge WellLarge WellLarge WellLarge Well
-                </div>
+                <div class="newsarticle-sm">Link to Article, Press, Cooking tutorial, Videos etc.</div>
             </div>
             <div class="col-md-4">
-                <div class="newsarticle-sm">Large Well</div>
+                <div class="newsarticle-sm">Link to Article, Press, Cooking tutorial, Videos etc.</div>
             </div>
             <div class="col-md-4">
-                <div class="newsarticle-sm">Large Well</div>
+                <div class="newsarticle-sm">Link to Article, Press, Cooking tutorial, Videos etc.</div>
             </div>
-        </div>  
+        </div>
     </div> <!-- End of 8 Row Main content and start of Right Side Columns -->
     <!-- Right Side Column -->
     <div class="col-lg-4">
@@ -78,6 +84,16 @@
 
             </div>
         </div>
+    </div>
+
+    <div class="row">
+        <img class="img-responsive img-rounded full-width-image" src="http://placehold.it/1900x500">
+        <div class="col-md-12 text-center">
+            <div id="main-page-content">
+                <h2>Insert Carousel here<h2>
+            </div>
+        </div>
+
     </div>
 </div>
  

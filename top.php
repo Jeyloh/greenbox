@@ -41,7 +41,7 @@
             <a href="#" class="navbar-brand"><img id="logo" src="resources/greenbox-logo.jpg"></a>
         </div>
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mainNavBar">
-            <span class="glyphicon glyphicon-th white"></span>
+            <span class="glyphicon glyphicon-th-large white"></span>
         </button>
 
 
@@ -52,7 +52,7 @@
                 <li><a href="index.php">Home</a></li>
                 <li><a href="products.php">Our Boxes!</a></li>
                 <li><a href="news.php">News</a></li>
-                <li><a href="reviews.php">Reviews</a></li>
+                <li><a href="#">Reviews</a></li>
                 <li><a href="faq.php">FAQ</a></li>
             </ul>
             <!-- Right Hand Side -->
@@ -191,7 +191,6 @@ Also a wrapper containing sidebar-wrapper and page-content-wrapper -->
     <div class="jumbotron text-center" id="banner">
         <br><br><br><br><br><br>
         <h1>- Greenbox -</h1>
-
     </div>
 
 
