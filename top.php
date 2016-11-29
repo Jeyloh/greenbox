@@ -138,10 +138,10 @@
                             <input type="text" name="address" class="form-control" placeholder="Address">
                             <select class="form-control" id="country">
                                 <option value="Country" disabled="disabled" selected>Country</option>
-                                <option value="AF">Norway</option>
-                                <option value="AX">Ireland</option>
-                                <option value="AL">USA</option>
-                                <option value="DZ">Spain</option>
+                                <option name="country" value="AF">Norway</option>
+                                <option name="country" value="AX">Ireland</option>
+                                <option name="country" value="AL">USA</option>
+                                <option name="country" value="DZ">Spain</option>
                             </select>
                             <input type="text" name="zip" class="form-control" placeholder="Zip">
                             <div class="checkbox">

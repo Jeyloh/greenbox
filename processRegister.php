@@ -69,7 +69,7 @@ if($mail) {
     $sql_mail = "SELECT * FROM User WHERE email='$mail'";
     if ($result = $con->query($sql_mail) === TRUE) {
         if ($result->num_rows == 1) {
-    
+
             $result->close();
         }
     } else {
