@@ -68,7 +68,7 @@ if($mail){
     var_dump($mail);
 	$sql_mail = "SELECT * FROM User WHERE email='$mail'";
 	if ($result = $con->query($sql_mail) === TRUE) {
-		if($result->num_rows != 1) {
+		if($result->num_rows == 1) {
 
 	   		$result->close();
 	   	} 
