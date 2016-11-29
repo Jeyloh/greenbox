@@ -129,13 +129,13 @@
                                    placeholder="Confirm Password" required>
                             <br><br>
                             <label>Personal Information</label>
-                            <input type="text" name=firstname class="form-control" placeholder="First Name" required>
-                            <input type="text" name=lastname class="form-control" placeholder="Surname" required>
-                            <input type="text" name=phone class="form-control" placeholder="Phone" required>
-                            <input type="text" name=email class="form-control" placeholder="E-mail" required>
+                            <input type="text" name="firstname" class="form-control" placeholder="First Name" required>
+                            <input type="text" name="lastname" class="form-control" placeholder="Surname" required>
+                            <input type="text" name="phone" class="form-control" placeholder="Phone" required>
+                            <input type="text" name="email" class="form-control" placeholder="E-mail" required>
                             <br><br>
                             <label>Shipping Address</label>
-                            <input type="text" name=address class="form-control" placeholder="Address">
+                            <input type="text" name="address" class="form-control" placeholder="Address">
                             <select class="form-control" id="country">
                                 <option value="Country" disabled="disabled" selected>Country</option>
                                 <option value="AF">Norway</option>
@@ -143,7 +143,7 @@
                                 <option value="AL">USA</option>
                                 <option value="DZ">Spain</option>
                             </select>
-                            <input type="text" name=zip class="form-control" placeholder="Address">
+                            <input type="text" name="zip" class="form-control" placeholder="Zip">
                             <div class="checkbox">
                                 <label>
                                     <input type="checkbox" name="admin" value="admin"> Are you Admin?

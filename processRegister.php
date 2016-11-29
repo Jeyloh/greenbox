@@ -72,16 +72,12 @@ if($mail){
 
 	   		$result->close();
 	   	} 
-	} else {
-	    echo "<br>Error checking email: " . $con->error;
-	}
-
-	
+	} // else post error!
 }
 
 
 // Check the error array for any errors, if none then append to the database!
-if(count($errors) > 0) 
+if (count($errors) > 0)
 {
 	echo "Ran into errors:<br> ";
 	foreach ($errors as $errorMessage) {
