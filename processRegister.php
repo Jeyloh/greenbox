@@ -22,6 +22,7 @@ $country = $_POST['country'];
 $zip = $_POST['zip'];
 $isAdmin = (isset($_POST['admin']) ? true : false);
 
+var_dump($mail);
 
 // Array with all Registration fields
 $allFields = array($username, $password, $fname, $lname, $phone, $mail, $address, $country, $zip, $isAdmin);
@@ -64,11 +65,11 @@ if (!filter_var($mail, FILTER_VALIDATE_EMAIL)) {
 
 // Checks that the email is not in the DB
 if($mail){
+    var_dump($mail);
 	$sql_mail = "SELECT * FROM User WHERE email='$mail'";
 	if ($result = $con->query($sql_mail) === TRUE) {
-		if($result->num_rows == 1) {
-	   		$errors[] = "Mail address $mail was registered";	
-	   		
+		if($result->num_rows != 1) {
+
 	   		$result->close();
 	   	} 
 	} else {
