@@ -6,6 +6,9 @@
 <?php
 include_once("connect.php");
 
+
+
+
 // Create database
 $deleteDB = "DROP DATABASE $db";
 if ($con->query($deleteDB) === TRUE) {
