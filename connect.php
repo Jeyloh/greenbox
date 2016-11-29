@@ -18,7 +18,7 @@ $db['default']['database'] = $cleardb_db;
 
 
 // Create the connection
-$con = new mysqli($servername, $username, $password, $db);
+$con = new mysqli($cleardb_server, $cleardb_username, $cleardb_password, $cleardb_db);
 // Check if successfully connected
 if ($con->connect_error) {
     die("Connection failed: " . $con->connect_error);
