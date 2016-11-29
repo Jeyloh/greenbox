@@ -5,9 +5,9 @@
 <?php
 // Connect to the server and DB
 session_start();
-include_once('connect.php');
+require('connect.php');
 include('functions.php');
-$con = new mysqli($servername, $username, $password, $db);
+global $con;
 
 
 $username = protectData($_POST['registerusername']);
@@ -64,15 +64,17 @@ if (!filter_var($mail, FILTER_VALIDATE_EMAIL)) {
 }
 
 // Checks that the email is not in the DB
-if($mail){
+if($mail) {
     var_dump($mail);
-	$sql_mail = "SELECT * FROM User WHERE email='$mail'";
-	if ($result = $con->query($sql_mail) === TRUE) {
-		if($result->num_rows == 1) {
-
-	   		$result->close();
-	   	} 
-	} // else post error!
+    $sql_mail = "SELECT * FROM User WHERE email='$mail'";
+    if ($result = $con->query($sql_mail) === TRUE) {
+        if ($result->num_rows == 1) {
+    
+            $result->close();
+        }
+    } else {
+        echo "<br>Mail is already registered: " . $con->error;
+    }
 }
 
 

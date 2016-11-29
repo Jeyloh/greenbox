@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="c17a123f-c067-482e-bf29-059edb8ddeee" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/processRegister.php" afterPath="$PROJECT_DIR$/processRegister.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/top.php" afterPath="$PROJECT_DIR$/top.php" />
     </list>
     <ignored path="untitled1.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -52,11 +51,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="processRegister.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="processRegister.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/processRegister.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1480">
-              <caret line="74" column="25" selection-start-line="74" selection-start-column="25" selection-end-line="74" selection-end-column="25" />
+            <state relative-caret-position="220">
+              <caret line="71" column="4" selection-start-line="71" selection-start-column="4" selection-end-line="71" selection-end-column="4" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="processLogin.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/processLogin.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="9" column="12" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
               <folding />
             </state>
           </provider>
@@ -88,8 +97,8 @@
       <file leaf-file-name="connect.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/connect.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="20">
-              <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+            <state relative-caret-position="220">
+              <caret line="11" column="45" selection-start-line="11" selection-start-column="45" selection-end-line="11" selection-end-column="45" />
               <folding />
             </state>
           </provider>
@@ -115,7 +124,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="top.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="top.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/top.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="360">
@@ -162,8 +171,8 @@
         <option value="$PROJECT_DIR$/database-setup.php" />
         <option value="$PROJECT_DIR$/composer.json" />
         <option value="$PROJECT_DIR$/connect.php" />
-        <option value="$PROJECT_DIR$/processRegister.php" />
         <option value="$PROJECT_DIR$/top.php" />
+        <option value="$PROJECT_DIR$/processRegister.php" />
       </list>
     </option>
   </component>
@@ -317,12 +326,12 @@
       <workItem from="1479646526844" duration="3419000" />
       <workItem from="1479650035219" duration="8928000" />
       <workItem from="1480027199014" duration="58969000" />
-      <workItem from="1480428946758" duration="2923000" />
+      <workItem from="1480428946758" duration="3153000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="74332000" />
+    <option name="totallyTimeSpent" value="74562000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -473,14 +482,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/processLogin.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="8" column="25" selection-start-line="8" selection-start-column="25" selection-end-line="9" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bootstrap-template.php" />
     <entry file="file://$PROJECT_DIR$/invokeAjax.php">
       <provider selected="true" editor-type-id="text-editor">
@@ -615,26 +616,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/connect.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="20">
-          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/composer.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="6" column="1" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database-setup.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-640">
-          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -647,18 +632,42 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/processRegister.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1480">
-          <caret line="74" column="25" selection-start-line="74" selection-start-column="25" selection-end-line="74" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/top.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
           <caret line="137" column="61" selection-start-line="137" selection-start-column="61" selection-end-line="137" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/connect.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="11" column="45" selection-start-line="11" selection-start-column="45" selection-end-line="11" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database-setup.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-640">
+          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/processLogin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="9" column="12" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/processRegister.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="71" column="4" selection-start-line="71" selection-start-column="4" selection-end-line="71" selection-end-column="4" />
           <folding />
         </state>
       </provider>
