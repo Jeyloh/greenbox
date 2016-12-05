@@ -21,9 +21,9 @@
 						</ul>
 					</div>
 				</div>
-				<div id="map">
 			</div>
-		</footer>
+		</div>
+	</footer>
 </div> <!-- <div class="container-fluid" id="main-content-wrapper"> -->
 
 

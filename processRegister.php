@@ -31,7 +31,6 @@ $errors = array();
 $_SESSION["user"] = $username;
 
 
-
 // check if each field in fields isset() or empty
 foreach($allFields AS $field) 
 {
@@ -47,7 +46,7 @@ if($password != $confpass)
 	$errors[] = "Passwords doesn't match.";
 }
 // Checks password length
-else if(strlen($password) < 8)
+else if(strlen($password) < 4)
 {
 	$errors[] = "Password must be more than 8 characters long.";
 }
@@ -67,12 +66,11 @@ if($mail){
 	$sql_mail = "SELECT * FROM User WHERE email='$mail'";
 	if ($result = $con->query($sql_mail) === TRUE) {
 		if($result->num_rows == 1) {
-	   		$errors[] = "Mail address $mail was registered";	
+            echo "<br>Error checking email: " . $con->error;
+            $errors[] = "Mail address $mail was registered";
 	   		
 	   		$result->close();
 	   	} 
-	} else {
-	    echo "<br>Error checking email: " . $con->error;
 	}
 }
 
@@ -93,7 +91,7 @@ else
 	if ($con->query($sql_register_user) === TRUE) {
 	    echo "<br>User $username registered successfully";
 	    $_SESSION['loggedin'] = true;
-	    if(isAdmin()) {
+	    if($isAdmin == true) {
 	    	$_SESSION['admin'] = true;
 	    	header("location:adminpage.php"); 
 	    } else {

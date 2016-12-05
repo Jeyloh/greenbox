@@ -6,7 +6,9 @@
 
 <div class="container">
 <h1>Our Greenboxes</h1>
-	<p>This is an overview of our boxes!</p>
+	<p>This is an overview of our boxes! Expect to receive your packages every Monday before 17:00.<br>
+	Ingredients will change every month, and you receive notification about new ingredients, and more recipes.<br>
+	You're receiving food for as many people the package states. There are family sizes, pair sizes and single sizes.</p>
 
 		<?php
 		include('connect.php');
@@ -14,8 +16,6 @@
 
 		$sql_vegPackage = "SELECT * FROM VegetablePackage";
 		$result_vegPackage = $con->query($sql_vegPackage);
-
-
 
 		while ($listOfBoxes = mysqli_fetch_assoc($result_vegPackage)) {
 			echo '<div class="row products-row">';
@@ -25,7 +25,7 @@
 						echo '<h2 name="productname">' . $listOfBoxes["packageSalesName"] . '</h2>';
 						echo '<p name="description">' .  $listOfBoxes["description"]  . '</p>';
 						echo '<div class="form-group form-inline">';
-							echo '<h1 name="price">' .  $listOfBoxes["price"]  . '</h1>';
+							echo '<h1 name="price">' .  $listOfBoxes["price"]  . "€<small>/month</small>" . '</h1>';
 							echo '<input type="number" name="months" class="form-control" id="submonth" placeholder="Months" style="width:150px" required>';
 						echo '</div>';	
 						echo '<button type="submit" name="subscribe" class="btn btn-success btn-lg ">Subscribe to product ' ."ID: " . $listOfBoxes['vegetablePackageId'] . '</button>'; //TODO: Activate subscription in DB and take to user page!

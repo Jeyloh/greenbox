@@ -1,4 +1,5 @@
 <?php $title = "Adminpage";
+
 include("top.php"); ?>
 
     <!-- PHP script to get all vegetables from VegetablePackages -->

@@ -65,8 +65,9 @@
     </div> <!-- End of 8 Row Main content and start of Right Side Columns -->
     <!-- Right Side Column -->
     <div class="col-lg-4">
+        <div class="col-centered">
         <h1>Advertise layout</h1>
-        <div class="col-lg-12 col-centered" id="social-media-div">
+        <div class="col-lg-12 col-centered">
             <a class="btn btn-block btn-social btn-facebook">
                 <span class="fa fa-facebook"></span> Follow us on Facebook!
             </a>
@@ -84,6 +85,7 @@
                 </div>
 
             </div>
+        </div>
         </div>
     </div>
 

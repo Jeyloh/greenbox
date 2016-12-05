@@ -121,29 +121,29 @@
                             <h2 class="form-signin-heading">Register here</h2>
                             <br><br>
                             <label>User Information</label>
-                            <input type="text" name=registerusername class="form-control" placeholder="Username"
+                            <input type="text" name="registerusername" class="form-control" placeholder="Username"
                                    required autofocus>
-                            <input type="password" name=registerpassword class="form-control" placeholder="Password"
+                            <input type="password" name="registerpassword" class="form-control" placeholder="Password"
                                    required>
-                            <input type="password" name=confirmpassword class="form-control"
+                            <input type="password" name="confirmpassword" class="form-control"
                                    placeholder="Confirm Password" required>
                             <br><br>
                             <label>Personal Information</label>
-                            <input type="text" name=firstname class="form-control" placeholder="First Name" required>
-                            <input type="text" name=lastname class="form-control" placeholder="Surname" required>
-                            <input type="text" name=phone class="form-control" placeholder="Phone" required>
-                            <input type="text" name=email class="form-control" placeholder="E-mail" required>
+                            <input type="text" name="firstname" class="form-control" placeholder="First Name" required>
+                            <input type="text" name="lastname" class="form-control" placeholder="Surname" required>
+                            <input type="text" name="phone" class="form-control" placeholder="Phone" required>
+                            <input type="text" name="email" class="form-control" placeholder="E-mail" required>
                             <br><br>
                             <label>Shipping Address</label>
                             <input type="text" name="address" class="form-control" placeholder="Address">
-                            <select class="form-control" id="country">
-                                <option value="Country" disabled="disabled" selected>Country</option>
-                                <option value="AF" name="country">Norway</option>
-                                <option value="AX" name="country">Ireland</option>
-                                <option value="AL" name="country">USA</option>
-                                <option value="DZ" name="country">Spain</option>
+                            <select class="form-control" id="country" name="country">
+                                <option value="Country" name="country" disabled="disabled" selected>Country</option>
+                                <option value="AF">Norway</option>
+                                <option value="AX">Ireland</option>
+                                <option value="AL">USA</option>
+                                <option value="DZ">Spain</option>
                             </select>
-                            <input type="text" name=zip class="form-control" placeholder="Zip">
+                            <input type="text" name="zip" class="form-control" placeholder="Zip">
                             <div class="checkbox">
                                 <label>
                                     <input type="checkbox" name="admin" value="admin"> Are you Admin?
