@@ -32,9 +32,6 @@ function isAdmin() {
     $result = $con->query($adminStatus);
     $row=mysqli_fetch_object($result);
 
-    var_dump($username);
-    var_dump($row);
-
     if ($row == true) {
     	return true;
     } else {

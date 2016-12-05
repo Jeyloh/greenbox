@@ -5,9 +5,9 @@
 <?php
 // Connect to the server and DB
 session_start();
-require('connect.php');
+include_once('connect.php');
 include('functions.php');
-global $con;
+$con = new mysqli($servername, $username, $password, $db);
 
 
 $username = protectData($_POST['registerusername']);
@@ -22,7 +22,6 @@ $country = $_POST['country'];
 $zip = $_POST['zip'];
 $isAdmin = (isset($_POST['admin']) ? true : false);
 
-var_dump($mail);
 
 // Array with all Registration fields
 $allFields = array($username, $password, $fname, $lname, $phone, $mail, $address, $country, $zip, $isAdmin);
@@ -64,22 +63,24 @@ if (!filter_var($mail, FILTER_VALIDATE_EMAIL)) {
 }
 
 // Checks that the email is not in the DB
-if($mail) {
-    var_dump($mail);
-    $sql_mail = "SELECT * FROM User WHERE email='$mail'";
-    if ($result = $con->query($sql_mail) === TRUE) {
-        if ($result->num_rows == 1) {
+if($mail){
+	$sql_mail = "SELECT * FROM User WHERE email='$mail'";
+	if ($result = $con->query($sql_mail) === TRUE) {
+		if($result->num_rows == 1) {
+	   		$errors[] = "Mail address $mail was registered";	
+	   		
+	   		$result->close();
+	   	} 
+	} else {
+	    echo "<br>Error checking email: " . $con->error;
+	}
 
-            $result->close();
-        }
-    } else {
-        echo "<br>Mail is already registered: " . $con->error;
-    }
+	
 }
 
 
 // Check the error array for any errors, if none then append to the database!
-if (count($errors) > 0)
+if(count($errors) > 0) 
 {
 	echo "Ran into errors:<br> ";
 	foreach ($errors as $errorMessage) {
@@ -94,9 +95,12 @@ else
 	// Used to insert all the variables from the form into the database!
 	if ($con->query($sql_register_user) === TRUE) {
 	    echo "<br>User $username registered successfully";
+	    $_SESSION['loggedin'] = true;
 	    if(isAdmin()) {
+	    	$_SESSION['admin'] = true;
 	    	header("location:adminpage.php"); 
 	    } else {
+	    	$_SESSION['admin'] = false;
 	    	header("location:userpage.php"); 
 	    }
 	} else {

@@ -39,11 +39,11 @@
 					<input type=text name=phone size=30 placeholder="Phone (+44)"><br>
 					<input type=text name=email size=30 placeholder="E-mail"><br>
 					<input type=text name=address size=30 placeholder="Address"><br>
-					<select name=country>
+					<select>
 						<option value="Country" disabled="disabled" selected>Country</option>
-					    <option value="Ireland">Ireland</option>
-					    <option value="Norway">Norway</option>
-					    <option value="USA">US n' A</option>
+					    <option value="Ireland" name="country">Ireland</option>
+					    <option value="Norway" name="country">Norway</option>
+					    <option value="USA" name="country">US n' A</option>
 				    </select>
 					<input type=text name=zip size=30 placeholder="Zip"><br>
 					</fieldset>

@@ -7,6 +7,7 @@
 session_start();
 include_once('connect.php');
 include('functions.php');
+$con = new mysqli($servername, $username, $password, $db);
 
 $name = $_POST['packageSalesName'];
 $price = intval($_POST['price']);

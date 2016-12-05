@@ -91,3 +91,11 @@ $(function () {
 
     google.maps.event.addDomListener(window, 'load', initMap);
 });
+
+
+// document.referrer returns a string of the previous document that loaded this page. Here I just check if it's some of the pages to open the login page
+$(function(){
+    if(document.referrer == "processSubscription.php" || document.referrer == "processLogin.php"){
+        $('#login-modal-trigger').click();
+    }
+});
