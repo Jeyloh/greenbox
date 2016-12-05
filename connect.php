@@ -10,7 +10,6 @@ $db = "greenbox";
 $con = new mysqli($servername, $username, $password, $db);
 // Check if successfully connected
 if ($con->connect_error) {
-    die("Connection to myphpadmin failed: " . $con->connect_error);
 
     $cleardb_url = parse_url(getenv("CLEARDB_DATABASE_URL"));
 
