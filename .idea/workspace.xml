@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c17a123f-c067-482e-bf29-059edb8ddeee" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/processRegister.php" afterPath="$PROJECT_DIR$/processRegister.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/top.php" afterPath="$PROJECT_DIR$/top.php" />
     </list>
     <ignored path="untitled1.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -86,11 +84,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="processRegister.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="processRegister.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/processRegister.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="780">
-              <caret line="39" column="26" selection-start-line="39" selection-start-column="26" selection-end-line="39" selection-end-column="26" />
+            <state relative-caret-position="140">
+              <caret line="7" column="7" selection-start-line="7" selection-start-column="7" selection-end-line="7" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -116,10 +114,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="top.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="top.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/top.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="387">
+            <state relative-caret-position="627">
               <caret line="143" column="49" selection-start-line="143" selection-start-column="49" selection-end-line="143" selection-end-column="49" />
               <folding />
             </state>
@@ -163,8 +161,8 @@
         <option value="$PROJECT_DIR$/database-setup.php" />
         <option value="$PROJECT_DIR$/composer.json" />
         <option value="$PROJECT_DIR$/connect.php" />
-        <option value="$PROJECT_DIR$/processRegister.php" />
         <option value="$PROJECT_DIR$/top.php" />
+        <option value="$PROJECT_DIR$/processRegister.php" />
       </list>
     </option>
   </component>
@@ -305,12 +303,12 @@
       <workItem from="1479650035219" duration="8928000" />
       <workItem from="1480027199014" duration="58969000" />
       <workItem from="1480428946758" duration="1658000" />
-      <workItem from="1480959877115" duration="788000" />
+      <workItem from="1480959877115" duration="1111000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="73855000" />
+    <option name="totallyTimeSpent" value="74178000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -607,18 +605,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/processRegister.php">
+    <entry file="file://$PROJECT_DIR$/top.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="780">
-          <caret line="39" column="26" selection-start-line="39" selection-start-column="26" selection-end-line="39" selection-end-column="26" />
+        <state relative-caret-position="627">
+          <caret line="143" column="49" selection-start-line="143" selection-start-column="49" selection-end-line="143" selection-end-column="49" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/top.php">
+    <entry file="file://$PROJECT_DIR$/processRegister.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="387">
-          <caret line="143" column="49" selection-start-line="143" selection-start-column="49" selection-end-line="143" selection-end-column="49" />
+        <state relative-caret-position="140">
+          <caret line="7" column="7" selection-start-line="7" selection-start-column="7" selection-end-line="7" selection-end-column="7" />
           <folding />
         </state>
       </provider>

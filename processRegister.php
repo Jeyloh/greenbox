@@ -5,9 +5,9 @@
 <?php
 // Connect to the server and DB
 session_start();
-include_once('connect.php');
+require('connect.php');
 include('functions.php');
-$con = new mysqli($servername, $username, $password, $db);
+
 
 
 $username = protectData($_POST['registerusername']);
