@@ -74,8 +74,6 @@ if($mail){
 	} else {
 	    echo "<br>Error checking email: " . $con->error;
 	}
-
-	
 }
 
 
@@ -90,7 +88,6 @@ if(count($errors) > 0)
 else 
 {	
 	// All data is checked and OK, starting session and registering data
-	var_dump("$username");
 	$sql_register_user = insertIntoUser("$username", "$encryptedPassword", "$isAdmin", "$fname", "$lname","$phone","$mail","$address","$country","$zip");
 	// Used to insert all the variables from the form into the database!
 	if ($con->query($sql_register_user) === TRUE) {
