@@ -34,14 +34,14 @@
 <body onload="openModal()">
 <!-- Fixed Navigation Bar  -->
 <nav class="navbar navbar-default navbar-fixed-top" id="fixed-navbar">
-    <div class="container-fluid">
+    <div class="container-fluid" id="mobile-background">
 
         <!-- Logo -->
         <div class="navbar-header">
             <a href="#" class="navbar-brand"><img id="logo" src="resources/greenbox-logo.jpg"></a>
         </div>
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mainNavBar">
-            <span class="glyphicon glyphicon-th-large white"></span>
+            <span class="glyphicon glyphicon-th-large"></span>
         </button>
 
 

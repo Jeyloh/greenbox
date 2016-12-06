@@ -9,8 +9,10 @@ $( document ).ready(function() {
 
         if ($(window).scrollTop() > startY) {
             $('.navbar').addClass("scrolled"); // The class to be added for css changes
+            $('.glyphicon-th-large').addClass("scrolled"); // The class to be added for css changes
         } else {
             $('.navbar').removeClass("scrolled"); // Removing it again
+            $('.glyphicon-th-large').removeClass("scrolled"); // Removing it again
         }
     }
     // Making sure the navbar is present before calling previous method
@@ -62,11 +64,11 @@ $( document ).ready(function() {
      * @type {string}
      */
     // My personal API for maps
-    var GmapAPI = "AIzaSyD8xFGLqm2yn96v0FWWbHmgLJSJaKuyjWM";
+
 
     function initMap() {
 
-        var location = new google.maps.LatLng(50.0875726, 14.4189987);
+        var location = new google.maps.LatLng(52.251900, -7.140879);
 
         var mapCanvas = document.getElementById('map');
         var mapOptions = {
@@ -75,10 +77,15 @@ $( document ).ready(function() {
             panControl: false,
             mapTypeId: google.maps.MapTypeId.ROADMAP
         };
+
         var map = new google.maps.Map(mapCanvas, mapOptions);
 
-    }
+        var marker = new google.maps.Marker({
+            position: location,
+            map: map
+        });
 
+    }
     google.maps.event.addDomListener(window, 'load', initMap);
 
 });

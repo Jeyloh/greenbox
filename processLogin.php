@@ -25,7 +25,6 @@ if ($result->num_rows == 1) {
     $_SESSION['user'] = $myusername;
     $_SESSION['loggedin'] = true;
 
-
     $row=mysqli_fetch_assoc($result);
     // Decide if the user is admin or not and redirect to appropriate page
     // TODO: Replace if condition with isAdmin() - Currently it returns NULL so look into that

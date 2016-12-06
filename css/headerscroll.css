@@ -50,3 +50,25 @@
     border:none;
     box-shadow:none;
 }
+
+.glyphicon-th-large {
+    color:white;
+    -webkit-transition: all .8s ease-out;
+    -moz-transition: all .8s ease-out;
+    -o-transition: all .8s ease-out;
+    -ms-transition: all .8s ease-out;
+    transition: all .8s ease-out;
+    background: rgba(0, 0, 0, 0);
+}
+
+@media (max-width: 768px) {
+
+    .navbar.scrolled, #banner.scrolled {
+        background: rgba(0, 0, 0, 0); /* Remove black bar in mobile */
+    }
+
+    .glyphicon-th-large.scrolled {
+        color:black;
+    }
+
+}
