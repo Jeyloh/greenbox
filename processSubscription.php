@@ -1,5 +1,5 @@
 <head>
-<title>Process Login</title>
+<title>Connect Subscription</title>
 </head>
 <body>
 
@@ -13,13 +13,29 @@ $subName = $_POST['productname'];
 $subDesc = $_POST['description'];
 $subPrice = $_POST['price'];
 $subMonths = $_POST['months'];
+//retrieved from hidden field
+$packId = $_POST['id'];
 
-if ($_SESSION['loggedin'] == true) {
+$user = $_SESSION['user'];
+var_dump("user from processsub " . $user);
+$sql_user = "SELECT userId FROM User";
+
+if (isLoggedIn()) {
     /** TODO: Connect the user pressing the button to the subscription package */
+    $sql_sub = "INSERT INTO Subscription(userId, vegetablePackageId, subscriptionInMonths) 
+    VALUES('$user', '$packId', '$subMonths')";
 
+    // Used to insert all the variables from the form into the database!
+    if ($con->query($sql_sub) === TRUE) {
+        header("location:userpage.php");
+    }
+    else {
+        echo "<br>Error connecting user with package: " . $con->error;
+    }
+    // Close the connection to the mysql server
+    $con -> close();
 } else {
     header("location:index.php");   // Re-direct to the Login form script
-
 }
 
 /**

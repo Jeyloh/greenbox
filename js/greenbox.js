@@ -1,78 +1,68 @@
-$(function () {
+$( document ).ready(function() {
     /**
-     * Listen to scroll to change header opacity class
+     * This Jquery function will check the scrolling and add the class scrolled
+     * which css change the background from no opacity to black. It will remove the
+     * black once the scroll is close enough to the top again.
      */
     function checkScroll() {
-        var startY = $('.navbar').height() * 3; //The point where the navbar changes in px
+        var startY = $('.navbar').height() * 3; // Changes based on navbars size * 3
 
         if ($(window).scrollTop() > startY) {
-            $('.navbar').addClass("scrolled");
+            $('.navbar').addClass("scrolled"); // The class to be added for css changes
         } else {
-            $('.navbar').removeClass("scrolled");
+            $('.navbar').removeClass("scrolled"); // Removing it again
         }
     }
-
+    // Making sure the navbar is present before calling previous method
     if ($('.navbar').length > 0) {
         $(window).on("scroll load resize", function () {
             checkScroll();
         });
     }
-});
 
-// On clicking #menu-toggle
-$("#menu-toggle").click(function (e) {
-    // Prevent the link to go to the URL
-    e.preventDefault();
-    // menuDusplayed are referenced in sidebar.css
-    $("#main-content-wrapper").toggleClass("menuDisplayed");
+    /**
+     * Removed now but was used for a sidebar menu.
 
-});
+    // On clicking #menu-toggle
+    $("#menu-toggle").click(function (e) {
+        // Prevent the link to go to the URL
+        e.preventDefault();
+        // menuDusplayed are referenced in sidebar.css
+        $("#main-content-wrapper").toggleClass("menuDisplayed");
 
-// On clicking #login-modal-trigger
-$("#login-modal-trigger").click(function (e) {
-    e.preventDefault();
-});
-// Tabs function in the Login/Register modal
-$(function () {
-    console.log("inside anon function to activate #log-reg-tabs")
+    });
+     */
+
+    /**
+     * login-modal-trigger is usually an anchor, this changes it default action to open the link
+     * and instead uses it's already defined functions.
+     */
+    $("#login-modal-trigger").click(function (e) {
+        e.preventDefault();
+    });
+    /**
+     * For working the tabs in the modal
+     */
     $("#log-reg-tabs").tab();
-});
+    // Change between the activated tabs
+    $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+        var target = $(e.target).attr("href") // activated tab
+    });
 
-$('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
-    var target = $(e.target).attr("href") // activated tab
-});
-
-// Javascript (not jquery) to scroll up newsletter on 150px scroll
-window.onscroll = function () {
-    headerScroll()
-};
-
-var newsletter = document.getElementById("newsletter-scroll-up");
-function headerScroll() {
-    if (document.body.scrollTop > 150 || document.documentElement.scrollTop > 150) {
-        newsletter.style.height = "50px";
-
-        console.log('scrolled 100px. newsletter height = ' + newsletter.style.height);
-    }
-}
-function closeNewsletter() {
-    newsletter.style.display = "none";
-}
-
-
-$(document).ready(function() {
-
+    /**
+     * Code used for working the accordion on the FAQ page
+     */
     $('#faq-section').find('.faq-title').click(function(){
         //Expand or collapse this panel
         $(this).next().slideToggle('slow');
     });
-});
 
-// Google MAPS https://bootstrapious.com/p/google-maps-and-bootstrap-tutorial
-
-var GmapAPI = "AIzaSyD8xFGLqm2yn96v0FWWbHmgLJSJaKuyjWM";
-
-$(function () {
+    /**
+     * Google Maps functionality currently not working. Will be displayed in the footer
+     * @type {string}
+     */
+    // My personal API for maps
+    var GmapAPI = "AIzaSyD8xFGLqm2yn96v0FWWbHmgLJSJaKuyjWM";
 
     function initMap() {
 
@@ -90,12 +80,50 @@ $(function () {
     }
 
     google.maps.event.addDomListener(window, 'load', initMap);
+
 });
+
+/**
+ * JAVASCRIPT WITHOUT JQUERY
+ */
+
+/**
+ * When the user scrolls n pixels down, the newsletter displays
+ */
+window.onscroll = function () {
+    headerScroll()
+};
+
+var newsletter = document.getElementById("newsletter-scroll-up");
+function headerScroll() {
+    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+        newsletter.style.height = "50px";
+
+        console.log('scrolled 200px. newsletter height = ' + newsletter.style.height);
+    }
+}
+// Used to actually close the newsletter on clicking the x button
+function closeNewsletter() {
+    newsletter.style.display = "none";
+}
+
+
+$(document).ready(function() {
+
+
+});
+
+// Google MAPS https://bootstrapious.com/p/google-maps-and-bootstrap-tutorial
+
+
 
 
 // document.referrer returns a string of the previous document that loaded this page. Here I just check if it's some of the pages to open the login page
-$(function(){
-    if(document.referrer == "processSubscription.php" || document.referrer == "processLogin.php"){
-        $('#login-modal-trigger').click();
-    }
-});
+function openModal() {
+    $(function(){
+        if(document.referrer == "processSubscription.php" || document.referrer == "processLogin.php"){
+            $('#login-modal-trigger').click();
+        }
+    });
+}
+

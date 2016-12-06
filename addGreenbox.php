@@ -17,7 +17,7 @@ $veg2 = $_POST['veg2'];
 $veg3 = $_POST['veg3'];
 $veg4 = $_POST['veg4'];
 $veg5 = $_POST['veg5'];
-$image = "resources/art.jpg"; // TODO: Change this to properly use an uploaded image
+$image = "resources/serverimage/" . $_POST['image'];
 
 // Array with all Registration fields
 $requiredInput = array($name, $price, $desc);

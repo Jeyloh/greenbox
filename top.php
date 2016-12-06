@@ -31,7 +31,7 @@
     <link rel="stylesheet" href="css/font-awesome.css">
 
 </head>
-<body>
+<body onload="openModal()">
 <!-- Fixed Navigation Bar  -->
 <nav class="navbar navbar-default navbar-fixed-top" id="fixed-navbar">
     <div class="container-fluid">
