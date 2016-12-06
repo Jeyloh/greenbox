@@ -70,9 +70,9 @@ DROP TABLE IF EXISTS `heroku_a415fd6530fc505`.`subscription` ;
 
 CREATE TABLE IF NOT EXISTS `heroku_a415fd6530fc505`.`subscription` (
   `subscriptionId` INT(11) NOT NULL AUTO_INCREMENT,
-  `userId` VARCHAR(255) NULL DEFAULT NULL,
-  `vegetablePackageId` INT(11) NULL DEFAULT NULL,
-  `subscriptionInMonths` INT(2) NULL DEFAULT NULL,
+  `userId` VARCHAR(255) NOT NULL DEFAULT NULL,
+  `vegetablePackageId` INT(11) NOT NULL DEFAULT NULL,
+  `subscriptionInMonths` INT(2) NOT NULL DEFAULT NULL,
   PRIMARY KEY (`subscriptionId`))
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = latin1;

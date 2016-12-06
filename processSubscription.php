@@ -17,8 +17,7 @@ $subMonths = $_POST['months'];
 $packId = $_POST['id'];
 
 $user = $_SESSION['user'];
-var_dump("user from processsub " . $user);
-$sql_user = "SELECT userId FROM User";
+var_dump("user from process-sub " . $user);
 
 if (isLoggedIn()) {
     /** TODO: Connect the user pressing the button to the subscription package */
@@ -31,6 +30,7 @@ if (isLoggedIn()) {
     }
     else {
         echo "<br>Error connecting user with package: " . $con->error;
+        var_dump("user from process-sub " . $user);
     }
     // Close the connection to the mysql server
     $con -> close();
@@ -40,7 +40,7 @@ if (isLoggedIn()) {
 
 /**
 $checkUser = "SELECT * FROM Subscription WHERE userId='$username' AND password='$password'";
-//$isAdmin = "SELECT * FROM User WHERE adminStatus=TRUE";
+//$isAdmin = "SELECT * FROM User WHERE userId='$_SESSION['user']";
 
 $result = $con->query($checkUser);
 

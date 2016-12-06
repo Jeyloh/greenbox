@@ -47,9 +47,11 @@ function isLoggedIn() {
 		return false;
 	}
 }
+function getCurrentUserData() {
+    global $con;
+    $userdata = $con->query("SELECT * FROM User WHERE userId ='{$_SESSION['user']}'");
 
-function getUserName() {
-	$username = $con->query("SELECT adminStatus FROM User WHERE userId = '$username'");
+    return $userdata;
 }
 
 function checkUserLogin($myusername, $mypassword) {

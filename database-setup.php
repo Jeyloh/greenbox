@@ -47,9 +47,9 @@ function insertRecord($record, $connection) {
 /* CREATE TABLE subscription AND ADD TEST DATA */
 $subscription_table = "CREATE TABLE IF NOT EXISTS Subscription(
 subscriptionId INT NOT NULL AUTO_INCREMENT,
-userId VARCHAR(255),
-vegetablePackageId INT,
-subscriptionInMonths INT(2),
+userId NOT NULL VARCHAR(255),
+vegetablePackageId NOT NULL INT,
+subscriptionInMonths NOT NULL INT(2),
 PRIMARY KEY (subscriptionId))";
 
 $subscription_records = "INSERT INTO Subscription ('userId', 'vegetablePackageId', 'subscriptionInMonths')

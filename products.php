@@ -1,6 +1,7 @@
 <?php $title = "Products"; include("top.php");
 
-
+$sql_vegPackage = "SELECT * FROM VegetablePackage";
+$result_vegPackage = $con->query($sql_vegPackage);
 
 ?>
 
@@ -13,9 +14,6 @@
 		<?php
 		include('connect.php');
 		global $con;
-
-		$sql_vegPackage = "SELECT * FROM VegetablePackage";
-		$result_vegPackage = $con->query($sql_vegPackage);
 
 		while ($listOfBoxes = mysqli_fetch_assoc($result_vegPackage)) {
 			echo '<div class="row products-row">';
