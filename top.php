@@ -52,7 +52,7 @@
                 <li><a href="index.php">Home</a></li>
                 <li><a href="products.php">Our Boxes!</a></li>
                 <li><a href="news.php">News</a></li>
-                <li><a href="#">Reviews</a></li>
+                <li><a href="reviews.php">Reviews</a></li>
                 <li><a href="faq.php">FAQ</a></li>
             </ul>
             <!-- Right Hand Side -->

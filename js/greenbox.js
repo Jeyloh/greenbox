@@ -112,3 +112,9 @@ function closeNewsletter() {
 
 
 
+/**
+ TODO: Javascript feedback
+ TODO: Add a feedback page for e.g: loging in /subscription
+ TODO: Reviews page with tons of javascript functionality
+
+ */
