@@ -22,18 +22,11 @@ $( document ).ready(function() {
         });
     }
 
-    /**
-     * Removed now but was used for a sidebar menu.
-
-    // On clicking #menu-toggle
-    $("#menu-toggle").click(function (e) {
-        // Prevent the link to go to the URL
-        e.preventDefault();
-        // menuDusplayed are referenced in sidebar.css
-        $("#main-content-wrapper").toggleClass("menuDisplayed");
-
-    });
-     */
+    // document.referrer returns a string of the previous document that loaded this page. Here I just check if it's some of the pages to open the login page
+    if(document.referrer == "http://localhost/greenbox/processSubscription.php" || document.referrer == "http://localhost/greenbox/products.php"){
+        window.console&&console.log('refferer works');
+        $('#login-modal-trigger').click();
+    }
 
     /**
      * login-modal-trigger is usually an anchor, this changes it default action to open the link
@@ -114,23 +107,8 @@ function closeNewsletter() {
     newsletter.style.display = "none";
 }
 
-
-$(document).ready(function() {
-
-
-});
-
 // Google MAPS https://bootstrapious.com/p/google-maps-and-bootstrap-tutorial
 
 
 
-
-// document.referrer returns a string of the previous document that loaded this page. Here I just check if it's some of the pages to open the login page
-function openModal() {
-    $(function(){
-        if(document.referrer == "processSubscription.php" || document.referrer == "processLogin.php"){
-            $('#login-modal-trigger').click();
-        }
-    });
-}
 
