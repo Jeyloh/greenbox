@@ -122,7 +122,7 @@
                     </div>
                     <!-- The Register tab proceeding to processRegister.php -->
                     <div class="tab-pane fade in" id="register-tab">
-                        <form class="form-register" method="POST" action="processRegister.php">
+                        <form class="form-register" name="form-register" method="POST" onsubmit="return validateForm()" action="processRegister.php">
                             <h2 class="form-signin-heading">Register here</h2>
                             <br><br>
                             <label>User Information</label>
@@ -180,14 +180,14 @@
     </div>
 </div>
 
-<div id="newsletter-scroll-up">
+<!--<div id="newsletter-scroll-up">
     <div id="nl-content" >
         Subscribe to our newsletter:
         <input type="text" id="newsletter-input" name="newsletter" placeholder="Enter email" autofocus>
         <button type="submit" class="btn btn-success btn-sm">Subscribe</button>
         <button type="button" class="close" onclick="closeNewsletter()">&times;</button>
     </div>
-</div>
+</div> -->
 
 <!-- The Main Container set to fluid to fill out the whole page
 Also a wrapper containing sidebar-wrapper and page-content-wrapper -->

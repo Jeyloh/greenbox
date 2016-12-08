@@ -127,9 +127,65 @@ function closeNewsletter() {
 
 
 
-/**
- TODO: Javascript feedback
- TODO: Add a feedback page for e.g: logging in /subscription
- TODO: Reviews page with tons of javascript functionality
+/** TODO: validateForm
+Make this abstract and reuseable with multiple parameters
+Code to validate a form with js, although I already do it in both HTML and PHP.
+http://www.w3schools.com/js/js_validation.asp
 
- */
+*/
+function validateForm(_form) {
+    var _form = document.getElementById("form-register");
+    // I use elements[input name] instead of just .input_name but both are available
+    console.log("the form" + _form + "phone" + _form.elements["phone"] + "firstname" + _form.elements["firstname"]);
+    var x = document.forms[_form][_form.phone].value;
+    if (isNaN(x)) {
+        console.log("Input not valid");
+        return false;
+    }
+}
+
+/** TODO: JSON Reviews with ajax
+REVIEWS PAGE
+
+http://stackoverflow.com/questions/1184624/convert-form-data-to-javascript-object-with-jquery
+http://jsfiddle.net/sxGtM/3/
+http://www.webslesson.info/2016/04/append-data-to-json-file-using-php.html
+http://stackoverflow.com/questions/17488660/difference-between-serialize-and-serializeobject-jquery
+
+*/
+// Send data to a JSON file, a javascript object notation, that keeps information about all reviews. Could use MYSQL instead but wanted to test this out.
+$.fn.serializeObject = function()
+{
+    var o = {};
+    var a = this.serializeArray();
+    $.each(a, function() {
+        if (o[this.name] !== undefined) {
+            if (!o[this.name].push) {
+                o[this.name] = [o[this.name]];
+            }
+            o[this.name].push(this.value || '');
+        } else {
+            o[this.name] = this.value || '';
+        }
+    });
+    return o;
+};
+
+$(function() {
+    $('#review-form').submit(function() {
+        $('#result').text(JSON.stringify($('#review-form').serializeObject()));
+        return false;
+    });
+});
+
+var jcontent = {
+    "username": "jTest",
+    "greenbox": "jBox",
+    "review": "Long review text on the greenbox here. Try to make it get this information from a json file instaed of static javascript.",
+    "rating": 5
+}
+
+document.getElementById("json-name").innerHTML = jcontent.username;
+document.getElementById("json-box").innerHTML = jcontent.greenbox;
+document.getElementById("json-rating").innerHTML = jcontent.review;
+document.getElementById("json-review").innerHTML = jcontent.rating;

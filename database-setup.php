@@ -7,25 +7,6 @@
 include_once("connect.php");
 
 
-
-
-// Create database
-$deleteDB = "DROP DATABASE $db";
-if ($con->query($deleteDB) === TRUE) {
-    echo "<br>Database deleted successfully";
-} else {
-    echo "<br>Error deleting database: " . $con->error;
-}
-
-// Create database
-$createDB = "CREATE DATABASE IF NOT EXISTS $db";
-if ($con->query($createDB) === TRUE) {
-    echo "<br>Database created successfully";
-} else {
-    echo "<br>Error creating database: " . $con->error;
-}
-$con = new mysqli($servername, $username, $password, $db);
-
 // Invoked for every table
 function createTable($table_name, $connection) {
     if ($connection->query($table_name) === TRUE) {
@@ -47,9 +28,9 @@ function insertRecord($record, $connection) {
 /* CREATE TABLE subscription AND ADD TEST DATA */
 $subscription_table = "CREATE TABLE IF NOT EXISTS Subscription(
 subscriptionId INT NOT NULL AUTO_INCREMENT,
-userId NOT NULL VARCHAR(255),
-vegetablePackageId NOT NULL INT,
-subscriptionInMonths NOT NULL INT(2),
+userId VARCHAR(255),
+vegetablePackageId INT,
+subscriptionInMonths INT(2),
 PRIMARY KEY (subscriptionId))";
 
 $subscription_records = "INSERT INTO Subscription ('userId', 'vegetablePackageId', 'subscriptionInMonths')
@@ -80,7 +61,7 @@ VALUES('JH001','encryptedpw', TRUE,'Joergen','Hansen', 98823376, 'something@mail
 $vegetablePackage_table = "CREATE TABLE IF NOT EXISTS VegetablePackage(
 vegetablePackageId INT NOT NULL AUTO_INCREMENT,
 packageSalesName VARCHAR(255),
-description VARCHAR(255),
+description TEXT,
 imageLink VARCHAR(255),
 price INT(12),
 vegetable1 VARCHAR(255),
@@ -88,6 +69,7 @@ vegetable2 VARCHAR(255),
 vegetable3 VARCHAR(255),
 vegetable4 VARCHAR(255),
 vegetable5 VARCHAR(255),
+review TEXT,
 PRIMARY KEY (vegetablePackageId))";
 //FOREIGN KEY (vegList) REFERENCES VegetablePackage(vegListId),
 //FOREIGN KEY (subscriptionId) REFERENCES mysubscription(subscriptionId)

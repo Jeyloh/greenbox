@@ -1,13 +1,13 @@
 <?php
 $servername = "localhost";
 $username = "root";
-$password = "usbw";
+$password = "";
 $db = "greenbox";
 
 
 
 // Create the connection
-$con = new mysqli($servername, $username, $password, $db);
+$con = new mysqli($servername, $username, $password);
 // Check if successfully connected
 if ($con->connect_error) {
 
@@ -24,5 +24,17 @@ if ($con->connect_error) {
     }
 
 }
+
+// Create database
+$createDB = "CREATE DATABASE IF NOT EXISTS $db";
+if ($con->query($createDB) === TRUE) {
+	if($_SERVER['REQUEST_URI'] == "greenbox/database-setup.php") {
+		echo "<br>Database created successfully";
+	}
+} else {
+    echo "<br>Error creating database: " . $con->error;
+}
+
+$con = new mysqli($servername, $username, $password, $db);
 
 ?>

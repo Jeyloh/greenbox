@@ -47,11 +47,10 @@ function isLoggedIn() {
 		return false;
 	}
 }
-function getCurrentUserData() {
+function getUserName() {
     global $con;
-    $userdata = $con->query("SELECT * FROM User WHERE userId ='{$_SESSION['user']}'");
-
-    return $userdata;
+    $username = var_export($_SESSION["user"]);
+    return $username;
 }
 
 function checkUserLogin($myusername, $mypassword) {
@@ -70,5 +69,13 @@ VALUES('$name', '$price', '$desc', '$veg1','$veg2', '$veg3', '$veg4', '$veg5', '
 	return $query;
 }
 
+
+function getPackageWithUserId() {
+    global $con;
+	$userdata = $con->query("SELECT * FROM User");
+	var_dump($userdata);
+	var_dump();
+
+}
 
 ?>
