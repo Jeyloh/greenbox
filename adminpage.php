@@ -66,7 +66,6 @@ include("top.php"); ?>
                         <th>Description</th>
                         <th>Vegetables</th>
                         <th>Related Image</th>
-                        <th>Edit Box</th>
                         <th>Remove Box</th>
                     </tr>
                     </thead>
@@ -94,7 +93,6 @@ include("top.php"); ?>
                         // This is the variable earlier created
                         echo '<th>' . $vegetableList . '</th>';
                         echo '<th><img src="' . $listOfBoxes["imageLink"] . '" width="150px" height="100px"></th>';
-                        echo '<th> <button type="button" class="close" onclick="edit()">&times;</button></th>'; //TODO: Implement edit()
                         echo '<th> <button type="button" class="close" onclick="removePackage(' . $intId . ')">&times;</button></th>';
                         echo '</tr>';
                     }
@@ -153,16 +151,6 @@ include("top.php"); ?>
 
     <script>
         // Using AJAX to send a live request to invokeAjax.php
-        function edit() {
-            $.ajax({
-                url: 'invokeAjax.php',
-                data: {action: 'edit'},
-                type: 'post',
-                success: function (output) {
-                    alert(output);
-                }
-            });
-        }
         function removePackage(pid) {
             $.ajax({
                 url: 'invokeAjax.php',

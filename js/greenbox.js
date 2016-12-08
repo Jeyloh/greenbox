@@ -53,12 +53,27 @@ $( document ).ready(function() {
     });
 
     /**
+     * Close the mobile menu while clicking outside of it
+     * src: http://stackoverflow.com/questions/23764863/how-to-close-an-open-collapsed-navbar-when-clicking-outside-of-the-navbar-elemenx
+     */
+    $(document).click(function (event) {
+        window.console&&console.log('Clicked outside menubar, jquery function invoked');
+        var clickover = $(event.target);
+        // target the menubar class
+        var $navbar = $(".navbar-collapse");
+        // check if it has the added class "in" which means its opened
+        var _opened = $navbar.hasClass("in");
+        // If it is, hide the navbar
+        if (_opened === true && !clickover.hasClass("navbar-toggle")) {
+            $navbar.collapse('hide');
+        }
+    });
+
+    /**
      * Google Maps functionality currently not working. Will be displayed in the footer
      * @type {string}
      */
     // My personal API for maps
-
-
     function initMap() {
 
         var location = new google.maps.LatLng(52.251900, -7.140879);
@@ -114,7 +129,7 @@ function closeNewsletter() {
 
 /**
  TODO: Javascript feedback
- TODO: Add a feedback page for e.g: loging in /subscription
+ TODO: Add a feedback page for e.g: logging in /subscription
  TODO: Reviews page with tons of javascript functionality
 
  */

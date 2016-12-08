@@ -40,13 +40,14 @@
         <div class="navbar-header">
             <a href="#" class="navbar-brand"><img id="logo" src="resources/greenbox-logo.jpg"></a>
         </div>
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mainNavBar">
-            <span class="glyphicon glyphicon-th-large"></span>
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mainNavBar" style="border:none">
+            <span class="glyphicon glyphicon-th-large" style="font-size:36px;"></span>
         </button>
 
 
         <!-- Collapsable Menu Items -->
         <div class="collapse navbar-collapse" id="mainNavBar">
+
             <!-- Left Hand Side -->
             <ul class="nav navbar-nav" id="nav-list">
                 <li><a href="index.php">Home</a></li>
@@ -76,6 +77,10 @@
                     echo('<li><a href="#" id="login-modal-trigger" class="green-background" data-target="#login-modal" data-toggle="modal">Login/Register</a></li>');
                 }
                 ?>
+
+            </ul>
+            <ul class="nav navbar-nav">
+
             </ul>
         </div>
         <h1 class="white" id="header-text"><!-- Add Header here instead?--></h1>
