@@ -25,14 +25,15 @@ if(isset($_POST["submit"]))
 include("top.php"); 
 
 ?>
-
+<script src="js/reviews.js"></script>
 <!--
     TODO: Show Javascript by taking review from user and adding it to a loop
         Add the data to the review-section dynamically and also add it to vegpack table in a new column.
 -->
 
-            <div class="container">
+            <div class="container" style="height:1000px">
                 <div class="row">
+                    <h3>Learning JSON, currently not working but test out the form</h3>
                     <div class="col-lg-2 add-review "> 
                         <form id="review-form" class="form-group" enctype='application/json' method="POST" action=""> <!-- Send to json -->
                             <label for="username-review">Username</label>

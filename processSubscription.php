@@ -22,7 +22,9 @@ var_dump($packId);
 $user = $_SESSION['user'];
 
 if (isLoggedIn()) {
-    /** TODO: Connect the user pressing the button to the subscription package */
+    // First remove current package
+    unsubscribePackage($user);
+    // Then add data to subscription table
     $sql_sub = "INSERT INTO Subscription(userId, vegetablePackageId, subscriptionInMonths) 
     VALUES('$user', '$packId', '$subMonths')";
 

@@ -23,6 +23,9 @@ function encryptPassword($pwToEncrypt) {
 	return $pwToEncrypt;
 }
 
+/**
+ * @return boolChecks if the user is an admin by querying the database.
+ */
 function isAdmin() {
     include('connect.php');
     global $con;
@@ -39,6 +42,10 @@ function isAdmin() {
     }
 }
 
+/**
+ * Reuseable function to check if the user is logged in with sessions
+ * @return bool
+ */
 function isLoggedIn() {
 
 	if(isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
@@ -47,16 +54,21 @@ function isLoggedIn() {
 		return false;
 	}
 }
+
+/**
+ * Retrieves the username of the current session
+ * @return mixed
+ */
 function getUserName() {
     global $con;
-    $username = var_export($_SESSION["user"]);
+    $username = var_dump($_SESSION["user"]);
     return $username;
 }
 
-function checkUserLogin($myusername, $mypassword) {
-	$query = "SELECT * FROM User WHERE userId='$myusername' AND password='$mypassword'";
-}
 
+/**
+ * Query the database with an insert function. Used for registering a user
+ */
 function insertIntoUser($username, $encryptedPassword, $isAdmin, $fname, $lname, $phone, $mail, $address, $country, $zip){
 	$query = "INSERT INTO User(userId, password, adminStatus, firstName, lastName, phone, email, address, country, zip) 
 VALUES('$username', '$encryptedPassword', '$isAdmin', '$fname', '$lname','$phone', '$mail', '$address', '$country', '$zip')";
@@ -73,9 +85,15 @@ VALUES('$name', '$price', '$desc', '$veg1','$veg2', '$veg3', '$veg4', '$veg5', '
 function getPackageWithUserId() {
     global $con;
 	$userdata = $con->query("SELECT * FROM User");
-	var_dump($userdata);
-	var_dump();
 
 }
 
+/**
+ *
+ */
+function unsubscribePackage($removeFromUser) {
+    global $con;
+    $sql_delete = "DELETE FROM Subscription WHERE userId = '$removeFromUser'";
+    $con->query($sql_delete);
+}
 ?>

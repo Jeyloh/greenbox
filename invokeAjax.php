@@ -1,14 +1,17 @@
 <?php
 require('connect.php');
+include('functions.php');
 
 if(isset($_POST['action']) && !empty($_POST['action'])) {
     $action = $_POST['action'];
     $pid = $_POST['pid'];
     $uid = $_POST['uid'];
+    $unsub = $_POST['unsubId'];
     switch($action) {
         case 'removepack' : removeBox($pid);break;
         case 'edit' : editBox();break;
         case 'removeuser' : removeUser($uid);break;
+        case 'unsub' : unsubscribePackage($unsub);
     }
 }
 

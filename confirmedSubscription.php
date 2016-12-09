@@ -1,6 +1,6 @@
 
 <?php $title = "Confirmed Subscription";
-header('Refresh:10;url=userpage.php');
+header('Refresh:5;url=userpage.php');
 include("top.php"); ?>
 
 <!--

@@ -22,7 +22,7 @@ echo('<br><br>');
 if ($result->num_rows == 1) {
     echo('found a user');
     // User was found, now set session variables
-    $_SESSION['user'] = $myusername;
+    $_SESSION['user'] = $username;
     $_SESSION['loggedin'] = true;
 
     $row=mysqli_fetch_assoc($result);

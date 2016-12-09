@@ -328,3 +328,41 @@ textarea#description {
 #review-section {
     border-bottom:1px gray solid;
 }
+
+#user-current-product {
+    height: 400px;
+    border-radius:10px;
+    padding:20px;
+    position: inherit;
+    color: #636363;
+}
+
+#user-current-product h1{
+    letter-spacing:15px;
+    font-variant: small-caps;
+}
+
+#user-current-product #user-left-container{
+    float:left;
+}
+
+#user-current-product #user-right-container{
+    float:right;
+    margin-right:30%;
+}
+
+.userpage-ingredients {
+    background-color: rgba(91, 91, 91, 0.2);
+    color: #000000;
+    font-size:1.6rem;
+    line-height: 2;
+    margin-left:20px;
+
+}
+
+#userpage-settings {
+    height:300px;
+    background-color: #94e19a;
+    padding:50px;
+    border-radius:100px;
+}
