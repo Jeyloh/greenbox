@@ -2,15 +2,29 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c17a123f-c067-482e-bf29-059edb8ddeee" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/feedback.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/processFeedback.php" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/images/front-page-3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/images/front-page-5.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/images/greenhouse-logo.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/images/login-background.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/images/mobile-menu-2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/images/ps-files/greenhouse-logo (1).psd" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/images/ps-files/greenhouse-logo.psd" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/images/ps-files/login-background (1).psd" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/images/ps-files/login-background.psd" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/images/ps-files/mobile-menu (1).psd" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/images/ps-files/mobile-menu.psd" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/images/veg1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/images/veg2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/images/veg3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/images/veg4.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/images/veg5.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/images/vegetable-pattern.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/images/vegetables-1620537_960_720.jpg" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bottom.php" afterPath="$PROJECT_DIR$/bottom.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/connect.php" afterPath="$PROJECT_DIR$/connect.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/greenbox.css" afterPath="$PROJECT_DIR$/css/greenbox.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/feedback.php" afterPath="$PROJECT_DIR$/feedback.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/greenbox.js" afterPath="$PROJECT_DIR$/js/greenbox.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/processRegister.php" afterPath="$PROJECT_DIR$/processRegister.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/top.php" afterPath="$PROJECT_DIR$/top.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/userpage.php" afterPath="$PROJECT_DIR$/userpage.php" />
     </list>
     <ignored path="untitled1.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -39,16 +53,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="reviews.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/reviews.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="320">
-              <caret line="43" column="28" selection-start-line="43" selection-start-column="28" selection-end-line="45" selection-end-column="58" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="adminpage.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/adminpage.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -68,8 +72,8 @@
       <file leaf-file-name="greenbox.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/greenbox.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="499">
-              <caret line="116" column="0" selection-start-line="116" selection-start-column="0" selection-end-line="116" selection-end-column="0" />
+            <state relative-caret-position="537">
+              <caret line="229" column="0" selection-start-line="229" selection-start-column="0" selection-end-line="229" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -78,14 +82,14 @@
       <file leaf-file-name="feedback.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/feedback.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="231">
-              <caret line="14" column="79" selection-start-line="14" selection-start-column="79" selection-end-line="14" selection-end-column="79" />
+            <state relative-caret-position="591">
+              <caret line="32" column="50" selection-start-line="32" selection-start-column="50" selection-end-line="32" selection-end-column="50" />
               <folding>
-                <marker date="1481253745763" expanded="true" signature="334:1944" ph="..." />
-                <marker date="1481253745763" expanded="true" signature="356:1937" ph="..." />
-                <marker date="1481253745763" expanded="true" signature="388:1926" ph="..." />
-                <marker date="1481253745763" expanded="true" signature="527:1911" ph="..." />
-                <marker date="1481253745763" expanded="true" signature="1711:1757" ph="..." />
+                <marker date="1481287440014" expanded="true" signature="334:2045" ph="..." />
+                <marker date="1481287440014" expanded="true" signature="356:2038" ph="..." />
+                <marker date="1481287440014" expanded="true" signature="388:2027" ph="..." />
+                <marker date="1481287440014" expanded="true" signature="528:2012" ph="..." />
+                <marker date="1481287440014" expanded="true" signature="1808:1854" ph="..." />
               </folding>
             </state>
           </provider>
@@ -101,6 +105,16 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="userpage.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/userpage.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="380">
+              <caret line="19" column="67" selection-start-line="19" selection-start-column="67" selection-end-line="19" selection-end-column="67" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="processRegister.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/processRegister.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -111,11 +125,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="greenbox.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="greenbox.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/greenbox.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="451">
-              <caret line="144" column="60" selection-start-line="144" selection-start-column="60" selection-end-line="144" selection-end-column="60" />
+            <state relative-caret-position="491">
+              <caret line="155" column="53" selection-start-line="155" selection-start-column="53" selection-end-line="155" selection-end-column="53" />
               <folding />
             </state>
           </provider>
@@ -134,8 +148,8 @@
       <file leaf-file-name="top.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/top.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="551">
-              <caret line="49" column="42" selection-start-line="49" selection-start-column="42" selection-end-line="49" selection-end-column="42" />
+            <state relative-caret-position="680">
+              <caret line="82" column="17" selection-start-line="82" selection-start-column="17" selection-end-line="82" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -189,7 +203,6 @@
         <option value="$PROJECT_DIR$/processSubscription.php" />
         <option value="$PROJECT_DIR$/functions.php" />
         <option value="$PROJECT_DIR$/products.php" />
-        <option value="$PROJECT_DIR$/userpage.php" />
         <option value="$PROJECT_DIR$/js/async-maps.js" />
         <option value="$PROJECT_DIR$/news.php" />
         <option value="$PROJECT_DIR$/css/headerscroll.css" />
@@ -198,13 +211,14 @@
         <option value="$PROJECT_DIR$/reviews.php" />
         <option value="$PROJECT_DIR$/adminpage.php" />
         <option value="$PROJECT_DIR$/connect.php" />
-        <option value="$PROJECT_DIR$/css/greenbox.css" />
         <option value="$PROJECT_DIR$/processRegister.php" />
         <option value="$PROJECT_DIR$/processFeedback.php" />
         <option value="$PROJECT_DIR$/bottom.php" />
         <option value="$PROJECT_DIR$/top.php" />
-        <option value="$PROJECT_DIR$/feedback.php" />
         <option value="$PROJECT_DIR$/js/greenbox.js" />
+        <option value="$PROJECT_DIR$/feedback.php" />
+        <option value="$PROJECT_DIR$/css/greenbox.css" />
+        <option value="$PROJECT_DIR$/userpage.php" />
       </list>
     </option>
   </component>
@@ -278,25 +292,7 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="greenbox" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="greenbox" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="images" />
+              <option name="myItemId" value="css" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -387,12 +383,12 @@
       <workItem from="1480027199014" duration="58969000" />
       <workItem from="1480428946758" duration="1658000" />
       <workItem from="1480959877115" duration="28317000" />
-      <workItem from="1481212862032" duration="9850000" />
+      <workItem from="1481212862032" duration="11568000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="111234000" />
+    <option name="totallyTimeSpent" value="112952000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -527,6 +523,7 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="40">
             <caret line="2" column="18" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
+            <folding />
           </first_editor>
           <second_editor />
         </state>
@@ -536,14 +533,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="362">
           <caret line="21" column="11" selection-start-line="21" selection-start-column="11" selection-end-line="21" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/userpage.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="9" column="14" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
           <folding />
         </state>
       </provider>
@@ -641,14 +630,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/greenbox.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="499">
-          <caret line="116" column="0" selection-start-line="116" selection-start-column="0" selection-end-line="116" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/processRegister.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="351">
@@ -671,22 +652,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/processFeedback.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="520">
-          <caret line="26" column="58" selection-start-line="26" selection-start-column="58" selection-end-line="26" selection-end-column="58" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/top.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="551">
-          <caret line="49" column="42" selection-start-line="49" selection-start-column="42" selection-end-line="49" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bottom.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="671">
@@ -695,24 +660,56 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/js/greenbox.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="491">
+          <caret line="155" column="53" selection-start-line="155" selection-start-column="53" selection-end-line="155" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/top.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="680">
+          <caret line="82" column="17" selection-start-line="82" selection-start-column="17" selection-end-line="82" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/greenbox.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="537">
+          <caret line="229" column="0" selection-start-line="229" selection-start-column="0" selection-end-line="229" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/feedback.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="14" column="79" selection-start-line="14" selection-start-column="79" selection-end-line="14" selection-end-column="79" />
+        <state relative-caret-position="591">
+          <caret line="32" column="50" selection-start-line="32" selection-start-column="50" selection-end-line="32" selection-end-column="50" />
           <folding>
-            <marker date="1481253745763" expanded="true" signature="334:1944" ph="..." />
-            <marker date="1481253745763" expanded="true" signature="356:1937" ph="..." />
-            <marker date="1481253745763" expanded="true" signature="388:1926" ph="..." />
-            <marker date="1481253745763" expanded="true" signature="527:1911" ph="..." />
-            <marker date="1481253745763" expanded="true" signature="1711:1757" ph="..." />
+            <marker date="1481287440014" expanded="true" signature="334:2045" ph="..." />
+            <marker date="1481287440014" expanded="true" signature="356:2038" ph="..." />
+            <marker date="1481287440014" expanded="true" signature="388:2027" ph="..." />
+            <marker date="1481287440014" expanded="true" signature="528:2012" ph="..." />
+            <marker date="1481287440014" expanded="true" signature="1808:1854" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/greenbox.js">
+    <entry file="file://$PROJECT_DIR$/processFeedback.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="451">
-          <caret line="144" column="60" selection-start-line="144" selection-start-column="60" selection-end-line="144" selection-end-column="60" />
+        <state relative-caret-position="520">
+          <caret line="26" column="58" selection-start-line="26" selection-start-column="58" selection-end-line="26" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/userpage.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="19" column="67" selection-start-line="19" selection-start-column="67" selection-end-line="19" selection-end-column="67" />
           <folding />
         </state>
       </provider>

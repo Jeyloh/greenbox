@@ -17,7 +17,7 @@ include("top.php"); ?>
 	<div class="row">
 		<div class="col-md-12" id="current-subscription">
 			<h1>Your Greenbox</h1>
-			<p> Here will be information about your current website </p>
+			<p> Here will be information about your current package </p>
 		</div>
 	</div>
 

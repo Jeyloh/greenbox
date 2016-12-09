@@ -135,12 +135,12 @@ Originally had a basic solution but replaced it with this abstract one with help
  @formElement the form this is called upon
  @return false if some of the inputs are not filled in
 */
-function validateForm(formElement) {
-    console.log("validateForm called on " + formElement);
+function validateForm(form) {
+    console.log("validateForm called on " + form);
     // feed parameter with 'this' value at the onClick so we can reference the form from the element itself
-    var form = formElement.form;
+    console.log("form " + form);
     // Get the forms control points to reference both their name and value in a loop
-    var controls = form.controls;
+    var controls = form.elements;
     var notValid = [];
     console.log("checking " + controls + " and its value ");
 
@@ -153,7 +153,7 @@ function validateForm(formElement) {
     }
     // If no errors, return true and proceed, if errors, alert them all and return false.
     if (notValid.length == 0) {
-        console.log("All fields are filled in");
+        console.log("All fields are entered correctly");
         return true;
     } else {
         alert(notValid.join('\n'));
