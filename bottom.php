@@ -11,7 +11,8 @@
 							<li><a href="index.php">Home</a></li>
 							<li><a href="products.php">Products</a></li>
 							<li><a href="news.php">News</a></li>
-							<li><a href="reviews.php">Reviews</a></li>
+                            <li><a href="reviews.php">Review Boxes</a></li>
+                            <li><a href="feedback.php">Feedback</a></li>
 							<li><a href="faq.php">FAQ</a></li>
 							<?php
 							if (isLoggedIn()) {
@@ -56,21 +57,6 @@
 
 
 
-<!-- Bootstrap core JavaScript
-================================================== -->
-<!-- Placed at the end of the document so the pages load faster -->
-<!-- Jquery hosted by Google, added additionally to Bootstrap -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-<!-- Latest compiled and minified JavaScript from Bootstrap -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
-        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
-        crossorigin="anonymous"></script>
 
-<!-- My Jquery and Javascript code -->
-<script src="js/greenbox.js"></script>
-<!-- Get asyn defer map from googleapi to initiate google maps -->
-<script async defer
-		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD8xFGLqm2yn96v0FWWbHmgLJSJaKuyjWM&callback=initMap">
-</script>
 </body>
 </html>

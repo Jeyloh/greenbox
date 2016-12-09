@@ -127,21 +127,39 @@ function closeNewsletter() {
 
 
 
-/** TODO: validateForm
-Make this abstract and reuseable with multiple parameters
+/**
 Code to validate a form with js, although I already do it in both HTML and PHP.
-http://www.w3schools.com/js/js_validation.asp
+Originally had a basic solution but replaced it with this abstract one with help from
+ http://stackoverflow.com/questions/15869897/javascript-foreach-input-in-form-for-name-and-value
 
+ @formElement the form this is called upon
+ @return false if some of the inputs are not filled in
 */
-function validateForm(_form) {
-    var _form = document.getElementById("form-register");
-    // I use elements[input name] instead of just .input_name but both are available
-    console.log("the form" + _form + "phone" + _form.elements["phone"] + "firstname" + _form.elements["firstname"]);
-    var x = document.forms[_form][_form.phone].value;
-    if (isNaN(x)) {
-        console.log("Input not valid");
+function validateForm(formElement) {
+    console.log("validateForm called on " + formElement);
+    // feed parameter with 'this' value at the onClick so we can reference the form from the element itself
+    var form = formElement.form;
+    // Get the forms control points to reference both their name and value in a loop
+    var controls = form.controls;
+    var notValid = [];
+    console.log("checking " + controls + " and its value ");
+
+    // Create the loop and add mistakes to the notValid array
+    for(var i = 0; i < controls.length; i++) {
+        // controls are added if they value doesn't exist
+        if (controls[i].value == "") {
+            notValid[i] = controls[i].name + ': ' + controls[i].value;
+        }
+    }
+    // If no errors, return true and proceed, if errors, alert them all and return false.
+    if (notValid.length == 0) {
+        console.log("All fields are filled in");
+        return true;
+    } else {
+        alert(notValid.join('\n'));
         return false;
     }
+
 }
 
 /** TODO: JSON Reviews with ajax
@@ -185,6 +203,7 @@ var jcontent = {
     "rating": 5
 }
 
+// Review page related, learning json
 document.getElementById("json-name").innerHTML = jcontent.username;
 document.getElementById("json-box").innerHTML = jcontent.greenbox;
 document.getElementById("json-rating").innerHTML = jcontent.review;

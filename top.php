@@ -4,6 +4,10 @@
     <title><?php echo $title; ?></title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description=" content="Greenbox is an imaginary company from a business idea where customers receives
+    packages of food to their house every week, including recipes and the exact amount of food required. The customer
+    can chose between different packages containing different ingredients, different sizes, prices etc. The customer
+    will also be able to subscribe for different amounts of time.">
 
     <!-- Latest compiled and minified CSS
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
@@ -29,6 +33,21 @@
     <link rel="stylesheet" href="css/bootstrap-social.css">
     <!-- FontAwesome provides stylish icons and fonts: http://fontawesome.io/examples/ -->
     <link rel="stylesheet" href="css/font-awesome.css">
+    <!-- Bootstrap core JavaScript ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- Jquery hosted by Google, added additionally to Bootstrap -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <!-- Latest compiled and minified JavaScript from Bootstrap -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+            crossorigin="anonymous"></script>
+
+    <!-- Get asyn defer map from googleapi to initiate google maps -->
+    <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD8xFGLqm2yn96v0FWWbHmgLJSJaKuyjWM&callback=initMap">
+    </script>
+    <!-- My Jquery and Javascript code -->
+    <script src="js/greenbox.js"></script>
 
 </head>
 <body>
@@ -53,7 +72,8 @@
                 <li><a href="index.php">Home</a></li>
                 <li><a href="products.php">Our Boxes!</a></li>
                 <li><a href="news.php">News</a></li>
-                <li><a href="reviews.php">Reviews</a></li>
+                <li><a href="reviews.php">Review Boxes</a></li>
+                <li><a href="feedback.php">Feedback</a></li>
                 <li><a href="faq.php">FAQ</a></li>
             </ul>
             <!-- Right Hand Side -->
@@ -180,14 +200,14 @@
     </div>
 </div>
 
-<!--<div id="newsletter-scroll-up">
+<div id="newsletter-scroll-up">
     <div id="nl-content" >
         Subscribe to our newsletter:
         <input type="text" id="newsletter-input" name="newsletter" placeholder="Enter email" autofocus>
         <button type="submit" class="btn btn-success btn-sm">Subscribe</button>
         <button type="button" class="close" onclick="closeNewsletter()">&times;</button>
     </div>
-</div> -->
+</div>
 
 <!-- The Main Container set to fluid to fill out the whole page
 Also a wrapper containing sidebar-wrapper and page-content-wrapper -->

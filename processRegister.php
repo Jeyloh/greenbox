@@ -34,10 +34,13 @@ $_SESSION["user"] = $username;
 // check if each field in fields isset() or empty
 foreach($allFields AS $field) 
 {
-	if(isset($_POST[$field]))
+    if (isset($_POST[$field]) && !empty($_POST[$field]))
 	{
-		$errors[] = "Please fill in $field";
-	}
+        $errors[] = "Please fill in $field";
+        //
+	} else {
+        echo "$field was filled in correctly!";
+    }
 }
 
 // Checks that passwords match
@@ -78,7 +81,7 @@ if($mail){
 // Check the error array for any errors, if none then append to the database!
 if(count($errors) > 0) 
 {
-	echo "Ran into errors:<br> ";
+	echo "<h2>Ran into errors:</h2> ";
 	foreach ($errors as $errorMessage) {
     	echo " - $errorMessage <br>";
 	}
