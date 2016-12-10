@@ -8,6 +8,7 @@ $db = "greenbox";
 
 // Create the connection
 $con = new mysqli($servername, $username, $password);
+$using_heroku = false;
 // Check if successfully connected
 if ($con->connect_error) {
 
