@@ -10,9 +10,9 @@ include('functions.php');
 global $con;
 
 $username=protectData($_POST['loginusername']);
-$password=protectData($_POST['loginpassword']);
+$password=md5($_POST['loginpassword']);
 
-
+echo($password);
 $checkUser = "SELECT * FROM User WHERE userId='$username' AND password='$password'";
 //$isAdmin = "SELECT * FROM User WHERE adminStatus=TRUE";
 
@@ -44,7 +44,8 @@ else {
     ?>
 
     <?php
-    header("location:index.php");   // Re-direct to the Login form script
+    header('Refresh:5;url=index.php');
+    //header("location:index.php");   // Re-direct to the Login form script
     //TODO: Add function to redirect into the modal
     echo "<br>Error logging in: " . $con->error;
 	$result->close();

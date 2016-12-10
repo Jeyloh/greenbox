@@ -21,7 +21,6 @@ $result_vegPackage = $con->query($sql_vegPackage);
 			$packageName = $listOfBoxes["packageSalesName"];
 			$desc = $listOfBoxes["description"];
 
-			var_dump($pid_int);
 			echo '<div class="row products-row">';
 				echo '<div class="col-md-8">';
 					echo '<form method="POST" action="processSubscription.php">';

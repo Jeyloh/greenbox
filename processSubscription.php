@@ -23,7 +23,8 @@ $user = $_SESSION['user'];
 
 if (isLoggedIn()) {
     // First remove current package
-    unsubscribePackage($user);
+    $sql_delete = "DELETE FROM Subscription WHERE userId = '$removeFromUser'";
+    $con->query($sql_delete);
     // Then add data to subscription table
     $sql_sub = "INSERT INTO Subscription(userId, vegetablePackageId, subscriptionInMonths) 
     VALUES('$user', '$packId', '$subMonths')";

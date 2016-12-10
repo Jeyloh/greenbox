@@ -11,8 +11,8 @@ include('functions.php');
 
 
 $username = protectData($_POST['registerusername']);
-$password = protectData($_POST['registerpassword']);
-$confpass = protectData($_POST['confirmpassword']);
+$password = $_POST['registerpassword'];
+$confpass = $_POST['confirmpassword'];
 $fname = $_POST['firstname'];
 $lname = $_POST['lastname'];
 $phone = $_POST['phone'];
@@ -56,7 +56,7 @@ else if(strlen($password) < 4)
 // Encrypts the password with md5 and stores it in a variable
 else 
 {
-	$encryptedPassword = encryptPassword($password);
+	$encryptedPassword = md5($password);
 }
 
 // Checks the email format

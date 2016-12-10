@@ -3,25 +3,13 @@
 
 
 function protectData($protectVar){
-	echo ("$protectVar protected to = ");
 	stripslashes($protectVar);
  	mysql_real_escape_string($protectVar);
  	htmlspecialchars($protectVar);
- 	echo ("$protectVar<br>");
-
  	$protectedVar = $protectVar;
  	return $protectedVar;
 }
 
-/**
-	Add salting and MD5 encryption
-*/
-function encryptPassword($pwToEncrypt) {
-	
-	$encryptedpw = md5($pwToEncrypt);
-	//return $encryptedpw;
-	return $pwToEncrypt;
-}
 
 /**
  * @return boolChecks if the user is an admin by querying the database.
@@ -88,12 +76,14 @@ function getPackageWithUserId() {
 
 }
 
-/**
- *
- */
-function unsubscribePackage($removeFromUser) {
+function deleteUser($userId){
     global $con;
-    $sql_delete = "DELETE FROM Subscription WHERE userId = '$removeFromUser'";
-    $con->query($sql_delete);
+    $sql_delete_user = "DELETE FROM User WHERE userId = $userId";
+
+        if ($con->query($sql_delete_user) === TRUE) {
+            echo "<br>User deleted successfully";
+        } else {
+            echo "<br>Error deleting user: " . $con->error;
+        }
 }
 ?>

@@ -10,7 +10,7 @@ include("top.php"); ?>
 
             <div class="container">
             	<h1>Congratulations!</h1>
-            	<p>User <?php getUserName();?> successfully subscribed to </p>
+            	<p>User <?php echo $_SESSION["user"];?> successfully subscribed to package. Redirecting to userpage!</p>
 
             	<div>
 

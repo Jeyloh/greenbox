@@ -80,6 +80,7 @@
             <ul class="nav navbar-nav navbar-right" id="right-nav">
                 <!-- A modal link to open the login-modal -->
                 <?php
+                error_reporting(0); //TODO: TAKE CARE removes all errors from the page
                 session_start();
                 include('connect.php');
                 include('functions.php');

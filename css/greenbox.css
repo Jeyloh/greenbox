@@ -361,8 +361,14 @@ textarea#description {
 }
 
 #userpage-settings {
-    height:300px;
+    height:400px;
     background-color: #94e19a;
     padding:50px;
     border-radius:100px;
+}
+
+#unsub-container {
+    position:absolute;
+    bottom:0px;
+    left:0px;
 }

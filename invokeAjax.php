@@ -1,17 +1,21 @@
 <?php
 require('connect.php');
-include('functions.php');
 
+// Check if action was defined from AJAX script
 if(isset($_POST['action']) && !empty($_POST['action'])) {
+    // Define which call was sent in the $action
     $action = $_POST['action'];
+    // Define different kinds of variables from the sent ajax functions
     $pid = $_POST['pid'];
     $uid = $_POST['uid'];
-    $unsub = $_POST['unsubId'];
+    $unsubPackageId = $_POST['unsubId'];
+
+    // Call different PHP functions for different actions
     switch($action) {
         case 'removepack' : removeBox($pid);break;
         case 'edit' : editBox();break;
         case 'removeuser' : removeUser($uid);break;
-        case 'unsub' : unsubscribePackage($unsub);
+        case 'unsub' : unsubscribePackage($unsubPackageId);break;
     }
 }
 
@@ -55,7 +59,12 @@ function editBox($editId) {
 
 }
 
-
+function unsubscribePackage($removeFromUser) {
+    global $con;
+    echo ("inside unsubscribePackage");
+    $sql_delete = "DELETE * FROM Subscription WHERE userId = '$removeFromUser'";
+    $con->query($sql_delete);
+}
 
 
 
