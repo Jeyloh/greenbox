@@ -11,7 +11,7 @@ $con = new mysqli($servername, $username, $password);
 $using_heroku = false;
 // Check if successfully connected
 if ($con->connect_error) {
-
+    $using_heroku = true;
     $cleardb_url = parse_url(getenv("CLEARDB_DATABASE_URL"));
 
 	$cleardb_server = $cleardb_url["host"];
@@ -19,7 +19,7 @@ if ($con->connect_error) {
     $cleardb_password = $cleardb_url["pass"];
 	$cleardb_db = substr($cleardb_url["path"], 1);
     $con = new mysqli($cleardb_server, $cleardb_username, $cleardb_password, $cleardb_db);
-    $using_heroku = true;
+
     if ($con->connect_error) {
     	die("Connection to heroku server failed: " . $con->connect_error);
     }

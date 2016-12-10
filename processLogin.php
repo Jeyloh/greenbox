@@ -44,8 +44,7 @@ else {
     ?>
 
     <?php
-    header('Refresh:5;url=index.php');
-    //header("location:index.php");   // Re-direct to the Login form script
+    header("location:index.php");   // Re-direct to the Login form script
     //TODO: Add function to redirect into the modal
     echo "<br>Error logging in: " . $con->error;
 	$result->close();
