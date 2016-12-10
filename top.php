@@ -87,6 +87,7 @@
                 if (isLoggedIn()) {
                     if ($_SESSION['admin'] == true) {
                         echo('<li><a href="adminpage.php" class="blue-background">Admin HUB</a></li>');
+                        echo('<li><a href="userpage.php" class="blue-background">User Home</a></li>');
                     } else {
                         echo('<li><a href="userpage.php" class="blue-background">User Home</a></li>');
                     }

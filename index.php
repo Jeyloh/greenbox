@@ -82,8 +82,8 @@
                 <div class="form-group">
                     <label for="nl-mail">E-Mail:</label>
                     <input type="text" class="form-control" id="nl-mail">
+                    <button type="submit" class="btn btn-success btn-sm">Subscribe</button>
                 </div>
-
             </div>
         </div>
         </div>
